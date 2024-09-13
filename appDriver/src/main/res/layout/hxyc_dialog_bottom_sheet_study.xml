@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/r10_bg_white"
+    android:padding="@dimen/padding_20">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="78dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出车提醒"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="4dp"
+            android:text="完成以下任务才能出车哦！"
+            android:textColor="@color/item_gray_primary"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/titleTv"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTitleTv"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/confirmBtn"
+            android:layout_width="133dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/bg_rec_gradient_blue"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cancelBtn"
+            android:layout_width="133dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/dra_dark_wrap"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv"
+            tools:text="取消"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/descTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="司机课堂必学课程"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/confirmBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/confirmBtn"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadViewWhite
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/setting" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/layout_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/MenuItemNew"
+                    android:background="@null"
+                    android:text="@string/setting_select_car" />
+
+                <TextView
+                    android:id="@+id/tv_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="@dimen/margin_40"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/complain_gray"
+                    tools:text="闽D88888" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/MenuItemNew"
+                    android:drawableEnd="@null"
+                    android:text="@string/screen_long_bright" />
+
+                <!--   <Switch
+                       android:id="@+id/img_switch"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="end|center_vertical"
+                       android:layout_marginEnd="@dimen/def_margin"
+                       android:thumbTint="@color/color_accent" />-->
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/img_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/def_margin"
+                    android:textColor="@color/custom_text_state_color"
+                    app:kswAnimationDuration="200"
+                    app:kswBackDrawable="@drawable/ios_back_drawable"
+                    app:kswTextAdjust="-5dp"
+                    app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                    app:kswThumbMarginBottom="-6dp"
+                    app:kswThumbMarginLeft="-4dp"
+                    app:kswThumbMarginRight="-4dp"
+                    app:kswThumbMarginTop="-2dp"
+                    app:kswThumbRangeRatio="1.4" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_volume"
+                style="@style/MenuItem.Def"
+                android:layout_marginTop="@dimen/line"
+                android:text="@string/volume"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/layout_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line"
+                android:background="@drawable/sel_white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/MenuItemNew"
+                    android:background="@null"
+                    android:drawableEnd="@null"
+                    android:text="@string/report_title" />
+
+                <TextView
+                    android:id="@+id/tv_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:drawableEnd="@drawable/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/report_all" />
+
+            </FrameLayout>
+
+            <View
+                style="@style/LineViewStyle"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10" />
+
+            <TextView
+                android:id="@+id/tv_permission"
+                style="@style/MenuItemNew"
+                android:text="允许后台弹出订单" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line"
+                android:background="@drawable/sel_white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_update"
+                    style="@style/MenuItemNew"
+                    android:background="@null"
+                    android:drawableEnd="@null"
+                    android:text="@string/update" />
+
+                <TextView
+                    android:id="@+id/tv_version_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tv_clean_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line"
+                android:background="@drawable/sel_white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/MenuItemNew"
+                    android:background="@null"
+                    android:drawableEnd="@null"
+                    android:text="@string/clean_cache" />
+
+                <TextView
+                    android:id="@+id/tv_cache_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:drawableEnd="@drawable/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/report_all" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_about"
+                style="@style/MenuItemNew"
+                android:text="@string/about" />
+
+            <FrameLayout
+                android:id="@+id/tv_env"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sel_white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/MenuItemNew"
+                    android:layout_marginTop="@dimen/line"
+                    android:text="@string/switch_env"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_env_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:drawableEnd="@drawable/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/report_all" />
+
+            </FrameLayout>
+
+            <View
+                style="@style/LineViewStyle"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10" />
+
+            <TextView
+                android:id="@+id/tv_platform_rule"
+                style="@style/MenuItemNew"
+                android:text="@string/platform_rule" />
+
+            <View
+                style="@style/LineViewStyle"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10" />
+
+            <TextView
+                android:id="@+id/tv_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_28"
+                android:gravity="left"
+                android:paddingStart="@dimen/padding_20"
+                android:text="@string/logout"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

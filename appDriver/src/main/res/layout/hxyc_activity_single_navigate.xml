@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.navi.AMapNaviView
+        android:id="@+id/navi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/dra_order_ongoing_whitefillet"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextNormalBlack"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:gravity="center"
+            android:text="@string/navigationconcise"
+            android:textStyle="bold" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/custom_text_state_color"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswTextAdjust="-5dp"
+            app:kswTextOff="关"
+            app:kswTextOn="开"
+            app:kswThumbDrawable="@drawable/ios_thumb_selector"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp"
+            app:kswThumbRangeRatio="1.4" />
+    </LinearLayout>
+</RelativeLayout>

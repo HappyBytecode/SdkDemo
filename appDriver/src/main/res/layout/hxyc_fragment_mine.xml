@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sel_bg_white_primary"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/info_height"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_driver_avatar"
+                android:layout_width="@dimen/avatar_width"
+                android:layout_height="@dimen/avatar_width"
+                android:layout_marginStart="@dimen/margin_20"
+                android:src="@drawable/my_siji_morentouxian"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_driver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_title"
+                app:layout_constraintBottom_toTopOf="@+id/tv_car_type"
+                app:layout_constraintStart_toEndOf="@id/iv_driver_avatar"
+                app:layout_constraintTop_toTopOf="@id/iv_driver_avatar"
+                tools:text="李师傅" />
+
+            <TextView
+                android:id="@+id/tv_licence_plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_25"
+                android:background="@drawable/r5_border_plate"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/padding_5"
+                android:paddingTop="@dimen/padding_4"
+                android:paddingRight="@dimen/padding_5"
+                android:paddingBottom="@dimen/padding_4"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_driver_name"
+                app:layout_constraintStart_toEndOf="@id/tv_driver_name"
+                app:layout_constraintTop_toTopOf="@id/tv_driver_name"
+                tools:text="皖A232GS" />
+
+            <TextView
+                android:id="@+id/tv_car_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintLeft_toLeftOf="@id/tv_driver_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_driver_name"
+                tools:text="经济 黑色 阿尔法·罗密欧" />
+
+            <TextView
+                android:id="@+id/tv_check_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_14"
+                android:background="@drawable/check_car"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_20">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/dra_white_radius_big"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawableStart="@drawable/prefix_blue"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="车主助手"
+                android:textColor="@color/order_black_primary_dark"
+                android:textSize="@dimen/text_size_middle"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/LineViewStyleNew"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="#e1e2e6" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.hxyc.taxi.driver"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+//    viewBinding {
+//        enabled true
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../key/hxyc.jks")
+            storePassword "hxyc2018"
+            keyAlias "hxyc"
+            keyPassword "hxyc2018"
+
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+        release {
+            storeFile file("../key/hxyc.jks")
+            storePassword "hxyc2018"
+            keyAlias "hxyc"
+            keyPassword "hxyc2018"
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("int", "DEBUG_CODE", "0")
+
+            debuggable true //允许调试
+            minifyEnabled false //是否代码混淆
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        release { //正式版本
+            buildConfigField("int", "DEBUG_CODE", "0")
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        def today = new Date()
+        variant.outputs.all {
+            outputFileName = "hxyc_driver_v${variant.versionCode}_${variant.buildType.name}_" + today.format('MMddHHmm') + ".apk"
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':appDriver')
+//    implementation(name: 'appDriver-release', ext: 'aar')
+//    implementation 'com.hxyc.driver:HXDriverSDK:1.0.0-beta1'
+}

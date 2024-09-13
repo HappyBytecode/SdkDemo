@@ -1,0 +1,181 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.jakewharton.butterknife'
+
+apply plugin: 'maven'
+uploadArchives {
+    repositories.mavenDeployer {
+        // 本地仓库路径D:\WorkSpace
+//        repository(url: uri('../repository'))
+        repository(url: "file://D://WorkSpace/aar/repository/")
+        // 唯一标识
+        pom.groupId = "com.hxyc.driver"
+        // 项目名称
+        pom.artifactId = "HXDriverSDK"
+        // 版本号
+        pom.version = "1.0.0-beta17"
+        pom.packaging = "aar"
+    }
+}
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        buildConfigField "String", "VERSION_NAME", "\"1.0.0\""
+        buildConfigField "int", "VERSION_CODE", "100"
+        flavorDimensions("1.0.0")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'arm64-v8a' //设置支持的SO库架构
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            java.srcDirs += 'src/main/kotlin'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("../key/hxyc.jks")
+            storePassword "hxyc2018"
+            keyAlias "hxyc"
+            keyPassword "hxyc2018"
+
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+        release {
+            storeFile file("../key/hxyc.jks")
+            storePassword "hxyc2018"
+            keyAlias "hxyc"
+            keyPassword "hxyc2018"
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("int", "DEBUG_CODE", "0")
+
+            debuggable true //允许调试
+            minifyEnabled false //是否代码混淆
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        release { //正式版本
+            buildConfigField("int", "DEBUG_CODE", "0")
+            debuggable false //允许调试
+
+            minifyEnabled true
+            zipAlignEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+//    android.libraryVariants.all { variant ->
+//        def today = new Date()
+//        variant.outputs.all {
+//            outputFileName = "hxyc_driver_v${variant.versionCode}_${variant.buildType.name}_" + today.format('MMddHHmm') + ".apk"
+//        }
+//    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    // 系统相关
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.fragment:fragment-ktx:1.2.4"
+    implementation "androidx.recyclerview:recyclerview:1.1.0-rc01"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-rc01"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+    implementation "com.google.android.material:material:1.2.0"
+    implementation "com.google.dagger:dagger:2.27"
+    implementation "com.google.dagger:dagger-android:2.27"
+    implementation "com.google.dagger:dagger-android-support:2.27"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.32"
+
+    // 其他工具
+    implementation "com.jakewharton:butterknife:10.2.0"
+    implementation "com.jakewharton.timber:timber:4.7.1"
+    implementation "pub.devrel:easypermissions:3.0.0"
+    implementation 'net.lingala.zip4j:zip4j:2.1.2'
+    implementation 'ren.yale.android:cachewebviewlib:2.1.8'
+    implementation "io.reactivex:rxjava:1.1.6"
+    implementation "com.artemzin.rxjava:proguard-rules:1.1.6.0"
+    implementation "io.reactivex:rxandroid:1.2.0"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.okhttp3:okhttp:4.8.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.8.0"
+    implementation "org.greenrobot:eventbus:3.1.1"
+    api "org.litepal.android:core:1.5.1"
+    implementation "com.github.bumptech.glide:glide:4.11.0"
+    implementation "com.gyf.immersionbar:immersionbar:3.0.0"
+    implementation "com.gyf.immersionbar:immersionbar-ktx:3.0.0"
+    implementation "com.alibaba:fastjson:1.2.21"
+    implementation "com.aliyun.dpa:oss-android-sdk:2.9.2"
+
+    // 特效相关
+    implementation "com.contrarywind:Android-PickerView:4.1.9"
+    // PictureSelector 基础 (必须)
+    implementation 'io.github.lucksiege:pictureselector:v3.0.9'
+
+    // 图片压缩 (按需引入)
+    implementation 'io.github.lucksiege:compress:v3.0.9'
+
+    // 图片裁剪 (按需引入)
+    implementation 'io.github.lucksiege:ucrop:v3.0.9'
+    // PictureSelector(相关)
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+
+    implementation "com.youth.banner:banner:2.1.0"
+    implementation 'com.kyleduo.switchbutton:library:2.0.0'
+    implementation "com.pnikosis:materialish-progress:1.0"
+    implementation "com.hyman:flowlayout-lib:1.1.2"
+    implementation 'com.hjq:xtoast:6.9'
+    implementation "com.hjq:toast:8.8"
+
+    // 注解器
+    kapt "com.jakewharton:butterknife-compiler:10.2.0"
+    kapt "com.google.dagger:dagger-compiler:2.27"
+    kapt "com.google.dagger:dagger-android-processor:2.27"
+
+    /* Netty长连接 */
+    implementation "io.netty:netty-all:5.0.0.Alpha2"
+
+    // 高德地图拉取最新版本
+    api 'com.amap.api:navi-3dmap:7.9.1_3dmap7.9.1'
+    api 'com.amap.api:search:7.6.0'
+    api 'com.amap.api:location:5.2.0'
+
+}

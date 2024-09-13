@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="driver" />
+
+    <version value="37" />
+
+    <list>
+        <mapping class="anda.travel.driver.data.entity.HxMessageEntity" />
+
+        <mapping class="anda.travel.driver.module.vo.AddressVO" />
+        <!--上传给服务器的点-->
+        <mapping class="anda.travel.driver.data.entity.UploadPointEntity" />
+
+    </list>
+
+</litepal>

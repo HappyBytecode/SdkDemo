@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sel_bg_white_primary"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_head_left"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/def_height_header"
+            android:paddingLeft="@dimen/def_margin"
+            android:paddingRight="@dimen/def_margin"
+            android:src="@drawable/back"
+            android:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/def_height_header"
+            android:gravity="center"
+            android:textColor="@color/head_view_center_black"
+            android:textSize="@dimen/def_title_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/img_head_left"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="标题" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_45">
+
+                <TextView
+                    android:id="@+id/tv_mile_value"
+                    android:layout_width="63dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_45"
+                    android:gravity="right"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_28"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_mile_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:includeFontPadding="false"
+                    android:paddingRight="@dimen/padding_4"
+                    android:text="公里"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_middle"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_mile_value"
+                    app:layout_constraintStart_toEndOf="@id/tv_mile_value" />
+
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:background="@drawable/blue_long_shape"
+                    app:layout_constraintRight_toRightOf="@id/tv_mile_unit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_mile_unit" />
+
+                <TextView
+                    android:id="@+id/tv_mile_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:includeFontPadding="false"
+                    android:paddingRight="@dimen/padding_4"
+                    android:text="今日总里程"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_mile_unit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_mile_unit" />
+
+                <TextView
+                    android:id="@+id/tv_charge_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_75"
+                    android:includeFontPadding="false"
+                    android:paddingRight="@dimen/padding_4"
+                    android:text="%"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_mile_unit" />
+
+                <TextView
+                    android:id="@+id/tv_charge_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_45"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="right"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_28"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_charge_unit"
+                    app:layout_constraintRight_toLeftOf="@id/tv_charge_unit" />
+
+                <TextView
+                    android:layout_width="63dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="@dimen/margin_22"
+                    android:background="@drawable/green_long_shape"
+                    app:layout_constraintRight_toRightOf="@id/tv_charge_unit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_charge_unit" />
+
+                <TextView
+                    android:id="@+id/tv_charge_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:includeFontPadding="false"
+                    android:paddingRight="@dimen/padding_4"
+                    android:text="剩余电量"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_charge_unit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_charge_unit" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="327dp"
+                android:layout_height="129dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_40"
+                android:src="@drawable/car_hx" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="@dimen/margin_4"
+                    android:textColor="@color/complain_gray"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="上次更新：今天12:00" />
+
+                <ImageView
+                    android:id="@+id/car_update_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:src="@drawable/car_update_status" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@drawable/r10_bg_white"
+                android:elevation="3dp"
+                android:paddingLeft="@dimen/padding_15"
+                android:paddingRight="@dimen/padding_15" />
+
+            <TextView
+                android:id="@+id/tv_vin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_21"
+                android:gravity="center_horizontal"
+                android:textColor="@color/item_gray_primary"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="车辆识别码（VIN码）:\n121r2424252" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_21"
+                android:layout_marginBottom="@dimen/margin_31"
+                android:text="数据来源于T-box"
+                android:textColor="@color/complain_gray"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

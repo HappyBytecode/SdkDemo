@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_35"
+    android:paddingBottom="@dimen/padding_23">
+
+    <TextView
+        android:id="@+id/tips_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="账户余额调整告知"
+        android:textColor="@color/journal_black_dark"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tips_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="司机师傅您好！"
+        android:textColor="@color/journal_black_dark"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tips_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:layout_marginTop="@dimen/margin_25"
+        android:layout_marginEnd="@dimen/margin_14"
+        android:lineSpacingMultiplier="1.3"
+        android:text="自2022年6月1日起，您的所有收入将重新计入您的钱包内，您可以在每个提现周期内从钱包里提取您的收入。\n2022年6月1日以前的收入我们已经通过工资的方式发放给您，钱包余额内将无法查看之前的收入明细。\n\n给您带来的不便敬请谅解！"
+        android:textColor="@color/journal_gray_time"
+        android:textSize="@dimen/text_size_normal"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tips_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_18"
+        android:background="@drawable/bg_rec_gradient_blue"
+        android:gravity="center"
+        android:text="@string/iknow"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_middle"
+        android:textStyle="bold" />
+
+</LinearLayout>

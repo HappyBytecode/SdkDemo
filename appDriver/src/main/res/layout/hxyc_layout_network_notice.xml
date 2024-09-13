@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_notice"
+        style="@style/TextNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:drawableLeft="@drawable/icon_tingdan_notice"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="@string/network_disconnect"
+        android:textColor="@color/black" />
+
+</LinearLayout>

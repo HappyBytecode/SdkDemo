@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadViewWhite
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/total_mile" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/padding_29"
+        android:paddingBottom="@dimen/padding_29">
+
+        <TextView
+            android:id="@+id/tv_total_mile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_39"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_mile_unit"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10000" />
+
+        <TextView
+            android:id="@+id/tv_mile_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="公里"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_total_mile"
+            app:layout_constraintLeft_toRightOf="@id/tv_total_mile"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="总里程"
+            android:textColor="@color/item_gray_primary"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_mile" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="26dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_choice_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dra_white_radius_big"
+            android:drawableRight="@drawable/icon_arrow_down_triangle"
+            android:drawablePadding="@dimen/padding_5"
+            android:paddingStart="@dimen/padding_10"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            tools:text="xxxx年xx月xx日" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:text="@string/from_to_end"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_choice_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dra_white_radius_big"
+            android:drawableRight="@drawable/icon_arrow_down_triangle"
+            android:drawablePadding="@dimen/padding_10"
+            android:paddingStart="@dimen/padding_5"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            tools:text="xxxx年xx月xx日" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_17">
+
+        <TextView
+            android:id="@+id/tv_sum_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="合计"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_sum_mile"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_sum_mile" />
+
+        <TextView
+            android:id="@+id/tv_sum_mile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_sum_left"
+            app:layout_constraintLeft_toRightOf="@id/tv_sum_left"
+            app:layout_constraintRight_toLeftOf="@id/tv_sum_right"
+            tools:text="200" />
+
+        <TextView
+            android:id="@+id/tv_sum_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="公里"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_sum_mile"
+            app:layout_constraintLeft_toRightOf="@id/tv_sum_mile"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <anda.travel.driver.baselibrary.view.refreshview.ExRefreshView
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20" />
+</LinearLayout>

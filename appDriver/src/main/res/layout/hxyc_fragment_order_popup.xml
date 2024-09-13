@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_black"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dra_dark_wrap"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="实时订单" />
+
+        <TextView
+            android:id="@+id/tv_reward"
+            android:layout_width="65dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@drawable/reward_flag"
+            android:visibility="gone"
+            app:layout_constraintRight_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:padding="2dp"
+            android:src="@drawable/icon_white_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_trip_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_trip_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="17:30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="时间"
+                android:textColor="@color/complain_gray"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintEnd_toEndOf="@id/tv_trip_time"
+                app:layout_constraintStart_toStartOf="@id/tv_trip_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_trip_time" />
+
+            <View
+                style="@style/LineViewStyle_Vertical"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_trip_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_trip_unit"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_trip_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:text="公里"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintBottom_toBottomOf="@id/tv_trip_distance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_trip_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="距您"
+                android:textColor="@color/complain_gray"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintEnd_toEndOf="@id/tv_trip_unit"
+                app:layout_constraintStart_toStartOf="@id/tv_trip_distance"
+                app:layout_constraintTop_toBottomOf="@id/tv_trip_distance" />
+
+            <View
+                style="@style/LineViewStyle_Vertical"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_all_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_all_unit"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_all_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:text="公里"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintBottom_toBottomOf="@id/tv_all_distance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_all_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="全程"
+                android:textColor="@color/complain_gray"
+                android:textSize="@dimen/text_size_middle"
+                app:layout_constraintEnd_toEndOf="@id/tv_all_unit"
+                app:layout_constraintStart_toStartOf="@id/tv_all_distance"
+                app:layout_constraintTop_toBottomOf="@id/tv_all_distance" />
+
+            <View
+                style="@style/LineViewStyle_Vertical"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:drawableStart="@drawable/anda_icon_start"
+            android:drawablePadding="@dimen/padding_20"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="软件园二期" />
+
+        <ImageView
+            android:id="@+id/iv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3"
+            android:layout_marginTop="@dimen/margin_6"
+            android:src="@drawable/icon_connect_dot"
+            app:layout_constraintStart_toStartOf="@id/tv_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_start" />
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:drawableStart="@drawable/anda_icon_end"
+            android:drawablePadding="@dimen/padding_20"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_start"
+            app:layout_constraintTop_toBottomOf="@id/iv_dot"
+            tools:text="国际会展中心" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tfl_remark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <anda.travel.driver.widget.layout.BaseFrameLayout
+            android:id="@+id/layout_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_20"
+            app:layout_constraintBottom_toTopOf="@+id/tv_grab"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_grab"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:background="@drawable/bg_rec_gradient_blue"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

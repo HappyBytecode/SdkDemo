@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="message_titles">
+        <item>@string/message_service</item>
+        <item>@string/message_conversation</item>
+    </array>
+
+    <array name="order_setting_type">
+        <item>@string/order_setting_type_grab</item>
+        <item>@string/order_setting_type_appoint</item>
+    </array>
+
+    <array name="car_belong_array1">
+        <item>京</item>
+        <item>沪</item>
+        <item>津</item>
+        <item>渝</item>
+        <item>冀</item>
+        <item>豫</item>
+        <item>云</item>
+        <item>辽</item>
+        <item>黑</item>
+        <item>湘</item>
+        <item>皖</item>
+        <item>鲁</item>
+        <item>新</item>
+        <item>苏</item>
+        <item>浙</item>
+        <item>赣</item>
+        <item>鄂</item>
+        <item>桂</item>
+        <item>甘</item>
+        <item>晋</item>
+        <item>蒙</item>
+        <item>陕</item>
+        <item>吉</item>
+        <item>闽</item>
+        <item>贵</item>
+        <item>粤</item>
+        <item>川</item>
+        <item>青</item>
+        <item>藏</item>
+        <item>琼</item>
+        <item>宁</item>
+    </array>
+
+    <array name="car_belong_array2">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </array>
+
+    <string name="message_service" translatable="false">服务通知</string>
+    <string name="message_conversation" translatable="false">对话</string>
+</resources>

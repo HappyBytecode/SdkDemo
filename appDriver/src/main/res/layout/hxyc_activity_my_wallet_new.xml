@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sel_bg_white_primary"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:title_text="@string/my_wallet" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_Top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/r10_bg_white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_12"
+                    android:paddingBottom="@dimen/padding_15"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <anda.travel.driver.widget.EnhanceTabLayout
+                        android:id="@+id/tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabIndicatorColor="@color/color_accent"
+                        app:tabIndicatorHeight="3dp"
+                        app:tabIndicatorWidth="39dp"
+                        app:tabSelectTextColor="@color/color_accent"
+                        app:tabTextColor="@color/text_grey"
+                        app:tabTextSize="18sp"
+                        app:tab_Mode="mode_fixed" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_balance_Top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@id/tab">
+
+                        <LinearLayout
+                            android:id="@+id/ll_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_25"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/order_black_primary_dark"
+                                android:textSize="39sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:text="@string/unit"
+                                android:textColor="@color/order_black_primary_dark"
+                                android:textSize="@dimen/text_size_middle"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_can_withdrawal_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_31"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/padding_5"
+                            android:text="0.00"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_28"
+                            app:layout_constraintEnd_toStartOf="@id/tv_can_withdrawal_yuan"
+                            app:layout_constraintTop_toBottomOf="@id/ll_balance"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_can_withdrawal_yuan"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/margin_30"
+                            android:text="@string/price_yuan"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_middle"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_can_withdrawal_num"
+                            app:layout_constraintEnd_toStartOf="@id/view_line" />
+
+                        <TextView
+                            android:id="@+id/tv_can_withdrawal"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:text="可提现金额"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintEnd_toEndOf="@id/tv_can_withdrawal_yuan"
+                            app:layout_constraintStart_toStartOf="@id/tv_can_withdrawal_num"
+                            app:layout_constraintTop_toBottomOf="@id/tv_can_withdrawal_num"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_line"
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="@dimen/margin_28"
+                            android:background="@color/sel_bg_gray"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_can_withdrawal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tv_can_withdrawal_num" />
+
+                        <TextView
+                            android:id="@+id/tv_to_be_recorder_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_30"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:text="0.00"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_28"
+                            app:layout_constraintStart_toEndOf="@id/view_line"
+                            app:layout_constraintTop_toBottomOf="@id/ll_balance"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_to_be_recorder_yuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:text="@string/price_yuan"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_middle"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_to_be_recorder_num"
+                            app:layout_constraintStart_toEndOf="@id/tv_to_be_recorder_num" />
+
+                        <TextView
+                            android:id="@+id/tv_to_be_recorder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:drawableEnd="@drawable/ic_to_be_recorded"
+                            android:drawablePadding="@dimen/padding_5"
+                            android:text="待入账金额"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintEnd_toEndOf="@id/tv_to_be_recorder_yuan"
+                            app:layout_constraintStart_toStartOf="@id/tv_to_be_recorder_num"
+                            app:layout_constraintTop_toBottomOf="@id/tv_to_be_recorder_num"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_withdrawal"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:background="@drawable/bg_selector_withdrawal"
+                            android:gravity="center"
+                            android:text="@string/withdrawal"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xlarge"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/tv_can_withdrawal" />
+
+                        <TextView
+                            android:id="@+id/tv_notice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:textColor="@color/item_gray_primary"
+                            android:textSize="@dimen/text_size_normal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_withdrawal"
+                            tools:text="每月20日至25日10:00至17:00可提现" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_bill_Top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/tab">
+
+                        <LinearLayout
+                            android:id="@+id/ll_rent_bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_25"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_rent_bill_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/order_black_primary_dark"
+                                android:textSize="39sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tv_rent_bill_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5"
+                                android:text="期"
+                                android:textColor="@color/order_black_primary_dark"
+                                android:textSize="@dimen/text_size_middle"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_paid_rent_bill_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_31"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/padding_5"
+                            android:text="0"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_28"
+                            app:layout_constraintEnd_toStartOf="@id/tv_paid_rent_bill_unit"
+                            app:layout_constraintTop_toBottomOf="@id/ll_rent_bill"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_paid_rent_bill_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="50dp"
+                            android:text="期"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_middle"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_paid_rent_bill_num"
+                            app:layout_constraintEnd_toStartOf="@id/view_rent_bill_line"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_paid_rent_bill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:text="已支付账单"
+                            android:textColor="@color/text_black"
+
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintEnd_toEndOf="@id/tv_paid_rent_bill_unit"
+                            app:layout_constraintStart_toStartOf="@id/tv_paid_rent_bill_num"
+                            app:layout_constraintTop_toBottomOf="@id/tv_paid_rent_bill_num"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_rent_bill_line"
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="@dimen/margin_28"
+                            android:background="@color/sel_bg_gray"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_paid_rent_bill"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tv_paid_rent_bill_num" />
+
+                        <TextView
+                            android:id="@+id/tv_un_paid_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:text="0"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_28"
+                            app:layout_constraintStart_toEndOf="@id/view_rent_bill_line"
+                            app:layout_constraintTop_toBottomOf="@id/ll_rent_bill"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_un_paid_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:text="期"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_middle"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_un_paid_num"
+                            app:layout_constraintStart_toEndOf="@id/tv_un_paid_num"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_un_paid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:text="未支付账单"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintEnd_toEndOf="@id/tv_un_paid_unit"
+                            app:layout_constraintStart_toStartOf="@id/tv_un_paid_num"
+                            app:layout_constraintTop_toBottomOf="@id/tv_un_paid_num"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_check_bill_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:background="@drawable/bg_selector_withdrawal"
+                            android:enabled="true"
+                            android:gravity="center"
+                            android:text="查看详情"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xlarge"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/tv_paid_rent_bill" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_balance_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/r10_bg_white"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/cons_Top">
+
+                    <TextView
+                        android:id="@+id/rl_Balance_detail"
+                        style="@style/MenuItemNew"
+                        android:background="@color/transparent"
+                        android:text="余额明细"
+                        android:textColor="@color/popup_item_un_choose"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        style="@style/LineViewStyleNew"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/margin_20" />
+
+                    <TextView
+                        android:id="@+id/rl_withdrawal_record"
+                        style="@style/MenuItemNew"
+                        android:text="@string/withdrawal_record"
+                        android:textColor="@color/popup_item_un_choose" />
+
+                    <View
+                        style="@style/LineViewStyleNew"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/margin_20" />
+
+                    <TextView
+                        android:id="@+id/rl_specification"
+                        style="@style/MenuItemNew"
+                        android:background="@color/transparent"
+                        android:text="@string/specification"
+                        android:textColor="@color/popup_item_un_choose" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_bill_specification"
+                    style="@style/MenuItemNew"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:background="@drawable/r10_bg_white"
+                    android:text="@string/specification"
+                    android:textColor="@color/popup_item_un_choose"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cons_Top" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
+
+
+

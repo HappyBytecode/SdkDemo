@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/order_complain_title" />
+
+    <TextView
+        android:id="@+id/tv_complaint_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_28"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:text="@string/order_complain_reason"
+        android:textColor="@color/order_black_primary_dark"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_status_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:lineSpacingExtra="10dp"
+        android:textColor="@color/item_black_primary"
+        android:textSize="@dimen/text_size_middle"
+        android:visibility="gone"
+        tools:text="您的投诉是因为他不讲卫生您的投诉是因为他不讲卫生您的投诉是因为他不讲卫生" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/dra_bg_complain_gray"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:text="0/120字"
+            android:textColor="@color/complain_gray"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/et_complain_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="请填写投诉乘客的原因"
+            android:lineSpacingExtra="10dp"
+            android:maxLength="120"
+            android:minHeight="170dp"
+            android:paddingLeft="@dimen/margin_large"
+            android:paddingTop="@dimen/margin_middle"
+            android:paddingRight="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin_middle"
+            android:textColor="@color/item_black_primary"
+            android:textSize="@dimen/text_size_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tfl_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:padding="10dp"
+        app:max_select="-1" />
+
+    <TextView
+        android:id="@+id/tv_complaint_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_middle"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="投诉处理中" />
+
+    <TextView
+        android:id="@+id/tv_complaint_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_middle"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="感谢你的反馈" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/bg_rec_gradient_blue"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_12"
+        android:paddingBottom="@dimen/padding_12"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xlarge" />
+
+</LinearLayout>

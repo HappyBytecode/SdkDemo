@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="289dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_rounded_rectangle_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="申请权限"
+        android:textColor="@color/black"
+        android:textSize="@dimen/def_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="为了您能正常使用和行约车APP，我们需要向您\n申请以下权限"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/pop_permission_icon_d" />
+
+    <TextView
+        android:id="@+id/tv_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/sel_bt_them_button"
+        android:gravity="center"
+        android:paddingStart="64dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="64dp"
+        android:paddingBottom="10dp"
+        android:text="我知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/def_text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

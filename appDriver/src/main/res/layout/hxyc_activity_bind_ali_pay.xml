@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sel_bg_white_primary"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="绑定支付宝" />
+
+    <RelativeLayout
+        android:id="@+id/rll_bind_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_25"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_zfb_name_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="支付宝账号："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_middle"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/et_zfb_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_toEndOf="@id/tv_zfb_name_key"
+            android:background="@android:color/white"
+            android:cursorVisible="true"
+            android:gravity="end|center_vertical"
+            android:hint="请输入正确的支付宝账号(手机号/邮箱)"
+            android:inputType="text"
+            android:textColor="@color/journal_black_dark"
+            android:textColorHint="@color/complain_gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_middle"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_modify_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_25"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_zfb_name_key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="支付宝账号："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_middle"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_click_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawablePadding="@dimen/margin_5"
+            android:onClick="onClick"
+            android:text="修改"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_middle"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_bind_zfb_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_toStartOf="@id/tv_click_modify"
+            android:drawablePadding="@dimen/margin_5"
+            android:textColor="@color/journal_black_dark"
+            android:textSize="@dimen/text_size_middle"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bind"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/bg_rec_gradient_blue"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="绑定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

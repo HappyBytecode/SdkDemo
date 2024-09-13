@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/bg_rec_gradient_blue"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_12"
+        android:paddingBottom="@dimen/padding_12"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/tv_result_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_45"
+        android:text="@string/order_complain_result"
+        android:textColor="@color/blue_6b7886"
+        android:textSize="@dimen/textsize_16"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textColor="@color/blue_4f5a67"
+        android:visibility="gone"
+        tools:text="@string/order_complain_dealing" />
+
+</LinearLayout>

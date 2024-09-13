@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextSize -->
+    <dimen name="textsize_30">30dp</dimen>
+    <dimen name="textsize_25">25dp</dimen>
+    <dimen name="textsize_20">20dp</dimen>
+    <dimen name="textsize_18">18dp</dimen>
+    <dimen name="textsize_16">16dp</dimen>
+    <dimen name="textsize_15">15dp</dimen>
+    <dimen name="textsize_14">14dp</dimen>
+
+    <!-- margin -->
+    <dimen name="margin_188">188dp</dimen>
+    <dimen name="margin_106">106dp</dimen>
+    <dimen name="margin_75">75dp</dimen>
+    <dimen name="margin_54">54dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_43">43dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_31">31dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_29">29dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_27">27dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_23">23dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_21">21dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_13">13dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_7">7dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_48">48dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_29">29dp</dimen>
+    <dimen name="padding_27">27dp</dimen>
+    <dimen name="padding_23">23dp</dimen>
+    <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_13">13dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_7">7dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+
+    <!-- size -->
+    <dimen name="size_100">100dp</dimen>
+    <dimen name="size_14">14dp</dimen>
+
+    <!-- 登录页 -->
+    <dimen name="login_height">48dp</dimen>
+
+    <!-- 首页 -->
+    <dimen name="home_height_bottom">124dp</dimen>
+    <dimen name="duty_margin">@dimen/margin_default</dimen>
+
+    <!-- 听单设置页 -->
+    <dimen name="slide_width">216dp</dimen>
+    <dimen name="slide_height">50dp</dimen>
+    <dimen name="slide_radius">25dp</dimen>
+    <dimen name="slide_btn_width">108dp</dimen>
+
+    <!-- 时间选择弹窗 -->
+    <dimen name="time_item_width">50dp</dimen>
+
+    <dimen name="r4">4dp</dimen>
+    <dimen name="border_width">1dp</dimen>
+    <dimen name="r6">6dp</dimen>
+
+    <!-- 我的 -->
+    <dimen name="info_height">100dp</dimen>
+    <dimen name="avatar_width">70dp</dimen>
+    <dimen name="option_nav_width">10dp</dimen>
+    <dimen name="option_nav_height">15dp</dimen>
+
+    <!-- 提现 -->
+    <dimen name="default_btn_height">48dp</dimen>
+    <dimen name="default_radius">4dp</dimen>
+    <dimen name="line">0.5dp</dimen>
+
+    <!-- XScrollView -->
+    <dimen name="progressbar_height">4dp</dimen>
+
+    <!-- 订单详情页 -->
+    <dimen name="order_map_margin">123dp</dimen>
+    <dimen name="order_btn_height">55dp</dimen>
+    <dimen name="order_top_height">75dp</dimen>
+    <dimen name="order_top_height2">36dp</dimen>
+
+    <dimen name="order_top_phone_size">40dp</dimen>
+
+    <!-- 高度 -->
+    <dimen name="h60">60dp</dimen>
+
+    <dimen name="about_logo_size">77dp</dimen>
+
+    <dimen name="width_127">127dp</dimen>
+    <dimen name="height_90">90dp</dimen>
+
+    <dimen name="def_margin">16dp</dimen>
+    <dimen name="def_height_header">48dp</dimen>
+    <dimen name="def_title_size">18sp</dimen>
+    <dimen name="def_text_size">16sp</dimen>
+
+    <dimen name="margin_default">@dimen/margin_16</dimen>
+    <!-- 字体大小改用dp -->
+    <dimen name="textsize_normal">@dimen/textsize_14</dimen>
+
+    <!-- 通用边距 -->
+    <dimen name="margin_large">@dimen/margin_15</dimen>
+    <dimen name="margin_middle">@dimen/margin_10</dimen>
+
+    <!-- 通用字体大小 -->
+    <dimen name="textsize_large">@dimen/textsize_16</dimen>
+    <dimen name="textsize_middle">@dimen/textsize_14</dimen>
+
+    <dimen name="order_image_size">40dp</dimen>
+
+    <!--常用字体大小-->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_middle">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_big">40sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="def_height_item">40dp</dimen>
+    <dimen name="text_size_39">39sp</dimen>
+
+    <!--sweet_alert-->
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+
+</resources>

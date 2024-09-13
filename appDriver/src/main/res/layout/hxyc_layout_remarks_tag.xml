@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_order_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginEnd="@dimen/margin_10"
+    android:background="@drawable/dra_order_remarks_tag"
+    android:ellipsize="end"
+    android:lines="1"
+    android:paddingStart="@dimen/padding_10"
+    android:paddingTop="@dimen/padding_10"
+    android:paddingEnd="@dimen/padding_10"
+    android:paddingBottom="@dimen/padding_10"
+    android:textColor="@color/colorPrimary"
+    android:textSize="@dimen/text_size_normal"
+    tools:text="调度费5元" />

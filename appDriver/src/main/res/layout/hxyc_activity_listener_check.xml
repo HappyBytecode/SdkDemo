@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <anda.travel.driver.baselibrary.view.HeadViewWhite
+                android:id="@+id/head_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/listener_check_title" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <anda.travel.driver.widget.wave.WaveView
+                    android:id="@+id/wave_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv_check"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/listener_check_btn_begin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_notice"
+                style="@style/TextBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="@string/listener_check_notice"
+                android:textColor="@color/listener_check_black" />
+
+            <LinearLayout
+                android:id="@+id/layoutTag1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height_item"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sel_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_20"
+                android:paddingEnd="@dimen/padding_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/listener_check_tag_network"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvStatus1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/def_margin"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/listener_check_status_wait"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divLine1"
+                style="@style/LineViewStyleNew"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutTag2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height_item"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/sel_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_20"
+                android:paddingEnd="@dimen/padding_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/listener_check_tag_location"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvStatus2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/def_margin"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/listener_check_status_wait"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divLine2"
+                style="@style/LineViewStyleNew"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutTag3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height_item"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/sel_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_20"
+                android:paddingEnd="@dimen/padding_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/listener_check_tag_status"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvStatus3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/def_margin"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/listener_check_status_wait"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_stop"
+                android:layout_width="136dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/sel_stop_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/listener_check_btn_stop"
+                android:textColor="@color/sel_stop_btn"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/def_margin"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_result_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_result_normal"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_result1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp"
+                    tools:text="@string/check_result_match1" />
+
+                <TextView
+                    android:id="@+id/tv_content1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="请在系统设置中打开定位服务，并允许潮运专车司机端使用定位。" />
+
+                <TextView
+                    android:id="@+id/tv_result2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp"
+                    tools:text="@string/check_result_match2" />
+
+                <TextView
+                    android:id="@+id/tv_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="请在系统设置中打开定位服务，并允许潮运专车司机端使用定位。" />
+
+                <TextView
+                    android:id="@+id/tv_result3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp"
+                    tools:text="@string/check_result_match3" />
+
+                <TextView
+                    android:id="@+id/tv_content3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="请在系统设置中打开定位服务，并允许潮运专车司机端使用定位。" />
+
+                <TextView
+                    android:id="@+id/tv_result4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp"
+                    tools:text="@string/check_result_match4" />
+
+                <TextView
+                    android:id="@+id/tv_content4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="请在系统设置中打开定位服务，并允许潮运专车司机端使用定位。" />
+
+                <TextView
+                    android:id="@+id/tv_result5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_10"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="16sp"
+                    tools:text="@string/check_result_match5" />
+
+                <TextView
+                    android:id="@+id/tv_content5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="。。。" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_result_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/def_margin"
+                android:paddingTop="24dp"
+                android:paddingRight="@dimen/def_margin"
+                android:paddingBottom="24dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:background="@color/text_grey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/check_result_notice"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:background="@color/text_grey" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

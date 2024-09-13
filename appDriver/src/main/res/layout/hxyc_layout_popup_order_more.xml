@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_bg_pop"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/order_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_20"
+        android:paddingBottom="@dimen/padding_20"
+        android:text="@string/order_detail_title"
+        android:textColor="@color/popup_item_un_choose"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold" />
+
+    <View
+        style="@style/LineViewStyleNew"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_30" />
+
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_20"
+        android:paddingBottom="@dimen/padding_20"
+        android:text="@string/ke_fu"
+        android:textColor="@color/popup_item_un_choose"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold" />
+
+</LinearLayout>

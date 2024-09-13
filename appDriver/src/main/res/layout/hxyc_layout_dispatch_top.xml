@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/order_top_height"
+    android:layout_below="@+id/head_view"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_top_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:drawableLeft="@drawable/sel_order_point"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_4f5a67"
+            android:textSize="18dp"
+            tools:text="软件园二期" />
+
+        <TextView
+            android:id="@+id/tv_top_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/dra_grey"
+            android:paddingLeft="2dp"
+            android:paddingTop="1dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="1dp"
+            android:text="@string/dispatch_detail_tag"
+            android:textColor="@color/text_aid_primary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_navigate"
+        android:layout_width="@dimen/order_top_phone_size"
+        android:layout_height="@dimen/order_top_phone_size"
+        android:layout_marginRight="@dimen/margin_large"
+        android:src="@drawable/xingcheng_btn_daohan" />
+
+    <ImageView
+        android:id="@+id/iv_service"
+        android:layout_width="@dimen/order_top_phone_size"
+        android:layout_height="@dimen/order_top_phone_size"
+        android:layout_marginRight="@dimen/margin_large"
+        android:src="@drawable/ic_customerservice" />
+
+</LinearLayout>

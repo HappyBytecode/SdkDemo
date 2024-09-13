@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingLeft="@dimen/padding_20"
+    android:paddingTop="@dimen/padding_13">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/journal_gray_time"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="X月X日 xx:xx" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_13"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/journal_black_dark"
+        app:layout_constraintLeft_toLeftOf="@id/tv_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        tools:text="奖励" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/journal_gray_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="@id/tv_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_des"
+        tools:text="满单奖" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_13"
+        android:text="0.00元"
+        android:textColor="@color/journal_black_light"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_content"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        style="@style/LineViewStyleNew"
+        android:layout_marginTop="@dimen/margin_13"
+        app:layout_constraintLeft_toLeftOf="@id/tv_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

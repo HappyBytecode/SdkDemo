@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/notice_white_bg"
+    android:paddingTop="@dimen/padding_13"
+    android:paddingBottom="@dimen/padding_20">
+
+    <ImageView
+        android:id="@+id/tips_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_6"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="8:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/onekey_background"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tips_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_15"
+        android:gravity="center"
+        android:textColor="@color/item_black_light"
+        android:textSize="@dimen/text_size_middle"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tips_img"
+        tools:text="设置成功，请返回重新登录" />
+
+    <TextView
+        android:id="@+id/tips_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/black_900"
+        android:textSize="@dimen/text_size_normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tips_title"
+        tools:text="违规操作将被视为异常单违规操作将被视为异常单违规操作将被视为异常单" />
+
+    <TextView
+        android:id="@+id/tips_confirm"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_45"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_45"
+        android:background="@drawable/dialog_btn_tips"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tips_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

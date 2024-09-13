@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".module.main.mine.setting.platformRule.PlatformRuleActivity">
+
+    <anda.travel.driver.baselibrary.view.HeadViewWhite
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/platform_rule" />
+
+    <TextView
+        android:id="@+id/tv_terms"
+        style="@style/MenuItemNew"
+        android:text="@string/login_terms_no_border" />
+
+    <TextView
+        android:id="@+id/tv_privacy"
+        style="@style/MenuItemNew"
+        android:text="@string/login_privacy_title" />
+
+</LinearLayout>

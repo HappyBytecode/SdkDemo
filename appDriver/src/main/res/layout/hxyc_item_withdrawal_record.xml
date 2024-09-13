@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@android:color/white"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_17"
+        android:textColor="@color/popup_item_un_choose"
+        android:textSize="@dimen/text_size_middle"
+        android:textStyle="bold"
+        tools:text="提现1.00元" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_alignStart="@id/tv_title"
+        android:layout_marginTop="@dimen/margin_15"
+        android:textColor="@color/item_gray_primary"
+        tools:text="2020-09-08 14:26:00" />
+
+    <TextView
+        android:id="@+id/tv_statue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:textColor="@color/item_gray_primary"
+        android:textSize="@dimen/text_size_middle"
+        tools:text="待审核" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:src="@drawable/arrow_right_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_20"
+        android:background="@color/line" />
+
+</RelativeLayout>

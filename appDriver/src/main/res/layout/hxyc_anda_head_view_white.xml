@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/def_height_header"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/head_view_center_black"
+        android:textSize="@dimen/def_title_size"
+        android:textStyle="bold"
+        tools:text="标题" />
+
+    <ImageView
+        android:id="@+id/img_head_left"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/def_height_header"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:src="@drawable/back"
+        android:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/img_head_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/def_height_header"
+        android:layout_gravity="center_vertical|right"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_head_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/def_height_header"
+        android:layout_gravity="center_vertical|right"
+        android:gravity="center"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:textSize="@dimen/def_text_size"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:background="#ebe9ee"
+        android:visibility="gone" />
+</merge>

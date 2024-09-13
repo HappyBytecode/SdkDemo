@@ -1,0 +1,349 @@
+<resources>
+
+    <string name="car_prefix">皖A</string>
+    <string name="app_name">和行约车司机端</string>
+    <string name="login_terms">《和行约车司机协议》</string>
+    <string name="login_terms_no_border">和行约车司机协议</string>
+    <string name="about_introduce">
+        和行约车是江汽集团旗下的移动出行平台，旨在为用户提供安全、高效、优质、满意的一站式出行解决方案。
+    </string>
+    <string name="about_licence">
+       All Rights Reserved © 2021 和行约车
+    </string>
+    <string name="contact_phone">4001608899</string>
+
+    <!--    分配给项目的AppKey（重要）-->
+    <string name="anda_appkey">c543eae4aa0a49fdab3ed761f6345001</string>
+    <!--    //百度相关key-->
+    <string name="baidu_voice_appId">29396129</string>
+    <string name="baidu_voice_appKey">Q4Hu3Govxolp7e77RxVd2jQb</string>
+    <string name="baidu_voice_secretKey">sv4XkdGjZSr9Ks1DMYRnl0nkBFhVtSFc</string>
+
+    <string name="network_error">访问失败，请检查您的网络</string>
+    <string name="network_timeout">请求超时</string>
+    <string name="empty_notice">暂无数据</string>
+
+    <!-- 登录页 -->
+    <string name="login_title">账号登录</string>
+    <string name="login_hint_phone">请输入手机号</string>
+    <string name="login_hint_pwd">请输入密码</string>
+    <string name="login_forget_pwd">忘记密码?</string>
+    <string name="login_login">登录</string>
+    <string name="login_one_key">本机号码一键登录</string>
+
+    <string name="login_empty_phone">请输入手机号</string>
+    <string name="login_empty_pwd">请输入密码</string>
+    <string name="login_error_phone">请输入正确的手机号</string>
+
+    <!-- duty -->
+    <string name="duty_on">开始接单</string>
+    <string name="duty_off">收车</string>
+    <string name="duty_setting">模式</string>
+    <string name="duty_listening">听单中</string>
+    <string name="duty_connecting">连接中</string>
+    <string name="duty_setting_real">仅实时</string>
+    <string name="duty_setting_book">仅预约</string>
+
+    <!-- 听单设置 -->
+    <string name="order_setting_type_grab">抢单模式</string>
+    <string name="order_setting_type_appoint">派单模式</string>
+
+    <!-- 新订单 -->
+    <string name="order_popup_title_realtime_km">距您%s公里</string>
+    <string name="order_popup_title_appointment">预约订单: </string>
+    <string name="order_popup_service_price">调度费%s元</string>
+
+    <!-- 主页 -->
+    <string name="home_title">和行司机</string>
+
+    <!-- 我的 -->
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_journal">我的流水</string>
+    <string name="message_center">消息中心</string>
+    <string name="contact_center">在线客服</string>
+    <string name="helper_center">常见问题</string>
+    <string name="setting">设置</string>
+
+    <!-- 我的钱包 -->
+    <string name="unit">元</string>
+    <string name="withdrawal">提现</string>
+    <string name="withdrawal_record">提现记录</string>
+    <string name="specification">规则说明</string>
+    <string name="balance">余额</string>
+    <string name="bill">账单</string>
+    <string name="please_input_card_number">请先输入支付宝账号</string>
+    <string name="input_card_number_error">请输入正确的支付宝账号</string>
+    <string name="to_ensure_the_safety_of_funds_own">提现到支付宝余额,每次手续费%s元\n为保障资金安全,请您尽量提现到本人支付宝账号</string>
+    <string name="withdrawal_account">支付宝账户：</string>
+    <string name="please_input_account_name">请先输入支付宝账户姓名</string>
+    <string name="hint_please_input_account_name">请输入支付宝账户姓名</string>
+
+    <!-- 提现记录 -->
+    <string name="yuan">%s元</string>
+    <string name="withdrawal_success">提现成功</string>
+    <string name="withdrawal_money">提现金额</string>
+    <string name="withdraw_details">提现详情</string>
+    <string name="withdraw_fee">%s元</string>
+    <string name="withdraw_way">提现方式</string>
+    <string name="withdraw_account_name">提现账户姓名</string>
+    <string name="withdraw_account">提现账户</string>
+    <string name="poundage">手续费</string>
+    <string name="apply_time">申请时间</string>
+    <string name="audit_time">审核时间</string>
+    <string name="audit_result">审核结果</string>
+    <string name="remark">备注</string>
+    <string name="none">无</string>
+    <string name="withdrawal_to_zhifubao">支付宝</string>
+    <string name="submit_applications">待审核</string>
+    <string name="withdrawal_failure">提现失败</string>
+    <string name="withdrawal_deliver">打款中</string>
+
+    <!-- EditText的digits限制 -->
+    <string name="digits_number_letter">
+        0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+    </string>
+
+    <!-- 考核统计 -->
+    <string name="order">订单</string>
+
+    <!-- 设置 -->
+    <string name="screen_long_bright">出车时屏幕常亮</string>
+    <string name="volume">语音播报音量</string>
+    <string name="update">应用更新</string>
+    <string name="about">关于我们</string>
+    <string name="platform_rule">平台规则与法律条款</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="about_title">关于我们</string>
+    <string name="logout">退出登录</string>
+
+    <!-- 帮助中心 -->
+    <string name="contact_customer_service">联系客服</string>
+    <!--<string name="advice_feedback">建议反馈</string>-->
+    <string name="advice_feedback">我要反馈</string>
+
+    <!-- 建议反馈 -->
+    <string name="raplyed">已回复</string>
+    <string name="push_success">感谢您的反馈,我们将尽快答复!</string>
+
+    <!-- 客服 -->
+    <string name="ke_fu">客服</string>
+
+    <!-- HomeFragment中使用 -->
+    <string name="home_tag_order">今日成单</string>
+    <string name="home_tag_income">今日流水/元</string>
+    <string name="home_tag_duration">在线时长/时</string>
+
+    <!-- 网络提示相关 -->
+    <string name="network_disconnect">连接已断开，当前可能收不到订单</string>
+
+    <!-- 订单列表 -->
+    <string name="order_list_title">订单中心</string>
+
+    <!-- 进行中订单 -->
+    <string name="order_detail_title">订单详情</string>
+
+    <string name="order_detail_btn_complain">投诉</string>
+
+    <string name="order_navi_distance_calculating">距离计算中</string>
+    <string name="order_navi_time_calculating">时间计算中</string>
+
+    <string name="price_rule">计价规则</string>
+    <string name="price_yuan">元</string>
+
+    <!-- dialog -->
+    <string name="cancel">取消</string>
+    <string name="delete_success">删除成功</string>
+
+    <!-- 投诉 -->
+    <string name="order_complain_title">投诉</string>
+    <string name="order_complain_reason">请填写投诉乘客的原因:</string>
+    <string name="order_complain_ing">投诉处理中</string>
+    <string name="order_complain_result">投诉处理结果</string>
+    <string name="order_complain_dealing">感谢您的反馈，我们会尽快处理</string>
+
+    <!-- 订单取消 -->
+    <string name="order_cancel">取消订单</string>
+    <string name="order_cancel_reason">请选择取消原因 :</string>
+
+    <!-- 催款 -->
+    <string name="order_rush">已向乘客发送催款短信，请耐心等候</string>
+
+    <!-- 收现 -->
+    <string name="order_pay_title">收现代付</string>
+    <string name="order_pay_notice">收到乘客现金支付后，您可选择以下方式代付车费</string>
+    <string name="order_pay_notice_pump">余额不足以支付抽成，请使用第三方支付</string>
+    <string name="order_pay_wechat">微信支付&#160;&#160;&#160;&#160;</string>
+    <string name="order_pay_alipay">支付宝支付</string>
+    <string name="order_pay_balance">余额支付&#160;&#160;&#160;&#160;</string>
+    <string name="order_pay_title_notice">确认已收到乘客支付的现金？</string>
+
+    <!-- 模拟导航 -->
+    <string name="navi_emulator_open">开启模拟导航</string>
+    <string name="navi_emulator_close">关闭模拟导航</string>
+
+    <!-- 语音播报 -->
+    <string name="speech_order_begin">现在前往%s去接乘客</string>
+    <string name="speech_order_arrive_start">到达上车地点，等待乘客上车</string>
+    <string name="speech_order_passenger_geton">欢迎使用和行约车,现在送乘客前往%s</string>
+    <string name="speech_order_arrive_end">到达目的地，请提醒乘客下车时注意安全，确认费用并发送给乘客,感谢您使用和行约车</string>
+
+    <!-- 任务中心 -->
+    <string name="task_list_title">任务中心</string>
+    <string name="task_detail_title">任务详情</string>
+    <string name="task_detail_time">任务时间</string>
+    <string name="task_detail_require">任务要求</string>
+    <string name="task_detail_award">任务奖励</string>
+    <string name="task_detail_describe">任务说明</string>
+
+    <!-- 听单检测 -->
+    <string name="listener_check_title">听单检测</string>
+    <string name="listener_check_notice">若长期接不到订单可点击检测原因</string>
+    <string name="listener_check_btn_begin">开始检测</string>
+    <string name="listener_check_btn_ongoing">检测中</string>
+    <string name="listener_check_btn_finish">检测完毕</string>
+    <string name="listener_check_btn_stop">停止检测</string>
+
+    <string name="listener_check_tag_network">网络连接</string>
+    <string name="listener_check_tag_location">定位权限</string>
+    <string name="listener_check_tag_status">司机状态</string>
+
+    <string name="listener_check_status_wait">待检测</string>
+    <string name="listener_check_status_ongoing">检测中</string>
+    <string name="listener_check_status_error">异常</string>
+    <string name="listener_check_status_normal">正常</string>
+
+    <string name="check_result_error">当前无法收听到订单，原因是</string>
+
+    <string name="check_result_normal">当前可以收到满足以下条件订单</string>
+    <string name="check_result_match1">起点或终点在%s的订单</string>
+    <string name="check_result_match2">%s订单</string>
+    <string name="check_result_match3">%s公里内的实时订单</string>
+    <string name="check_result_match4">%s的预约订单</string>
+    <string name="check_result_match5">订单播报设置：%s，可在设置中修改</string>
+
+    <string name="check_result_notice">若您仍收不到订单，可能是附近抢单司机较多，或附近订单数量较少。</string>
+
+    <string name="take_photo">拍照</string>
+    <string name="from_album">从相册选择</string>
+
+    <!-- 接近目的地 -->
+    <string name="order_near_dest">接近目的地，请您及时结束计费，并与乘客确认费用,感谢您使用和行约车</string>
+    <!-- 其它语音提示 -->
+    <string name="speech_order_late">您已等候较久，若乘客仍未上车，可开始迟到计费，或免责取消订单</string>
+    <string name="speech_order_near_origin">接近上车地点，如已到达，可开始等待乘客计时</string>
+    <string name="speech_order_need_start">温馨提示，系统检测您已开始行驶，但尚未开始计费</string>
+
+    <!-- 提示语 -->
+    <string name="back_press_notice">再按一次返回键退出应用</string>
+
+    <!-- 调度相关 -->
+    <string name="dispatch_detail_title">调度中</string>
+    <string name="dispatch_detail_tag">前往调度地点</string>
+    <string name="dispatch_detail_notice">到达目的地附近或接单可完成调度</string>
+
+    <!-- 代班司机 -->
+    <string name="setting_select_car">选择车辆</string>
+
+    <!-- 全局播报 -->
+    <string name="report_title">订单播报</string>
+    <string name="report_all">全部页面</string>
+    <string name="report_all_notice">所有页面都允许弹出新订单</string>
+    <string name="report_special">仅首页</string>
+    <string name="report_special_notice">仅在首页允许弹出新的订单</string>
+    <string name="report_notice">
+        订单播报说明：\n
+        1. 当司机有订单正在进行中时，无论出于什么界面，都不会弹出新订单;\n
+        2. 当司机端后台运行或锁屏时，订单播报可能只有声音，需进入应用操作接单;\n
+        3. 若希望随时都不错过订单，可选择“全部页面”；若希望在进行其他操作时，不被订单打断，可选择“仅首页”。
+    </string>
+
+    <string name="heatmap">热力图</string>
+    <string name="yesterday">昨天</string>
+    <string name="threeday">近3天</string>
+    <string name="week">近7天</string>
+    <string name="chat">发消息</string>
+    <string name="nomessage">暂无消息</string>
+    <string name="noOrder">暂无订单</string>
+    <string name="navigationconcise">导航语音简洁模式</string>
+    <string name="navito">导航前往</string>
+    <string name="iknow">我知道了</string>
+
+    <string name="rank_list">排行</string>
+    <string name="unit_minute">分钟</string>
+    <string name="fare">费用</string>
+    <string name="quit_navigation">退出导航</string>
+    <string name="switch_env">切换环境</string>
+    <string name="far_title">距离目的地过远，是否确认到达？</string>
+    <string name="far_content">违规操作将被视为异常单</string>
+    <string name="far_confirm">确认到达</string>
+    <string name="duty_title">连续在线4小时了</string>
+    <string name="duty_content">收车休息一下吧！</string>
+    <string name="fine">好的</string>
+    <string name="continue_work">继续接单</string>
+    <string name="notification_title">和行约车司机端</string>
+    <string name="notification_message">和行约车司机端正在运行中</string>
+    <string name="socket_channel_name">socket service</string>
+    <string name="socket_channel_description">Used for socket connection</string>
+    <!--3.0改版-->
+    <string name="all_order">全部订单</string>
+    <string name="wait_service">待服务</string>
+    <string name="un_paid">未支付</string>
+    <string name="paid">已支付</string>
+    <string name="popup_order_cancel">已取消</string>
+    <string name="order_service_explain">专属在线客服，轻松解决订单问题</string>
+    <string name="order_appointment">预约单</string>
+    <string name="order_for_payment">催付</string>
+    <string name="btn_payment_for_other">代付车费</string>
+    <string name="order_open_detail">展开详情</string>
+    <string name="mode_setting">模式设置</string>
+    <string name="order_real_time">实时单</string>
+    <string name="setting_order_real_label">设置 派/抢单</string>
+    <string name="setting_appointment_label">设置 预约时间</string>
+    <string name="from_to_end">至</string>
+    <string name="order_navi_voice">导航语音简洁模式</string>
+    <string name="setting_save">保存设置</string>
+    <string name="register_account">注册司机账号</string>
+    <string name="welcome">欢迎加入和行约车</string>
+    <string name="login_privacy">《个人信息保护及隐私政策》</string>
+    <string name="other_login">其他方式登录</string>
+    <string name="login_privacy_title">个人信息保护及隐私政策</string>
+    <string name="reward">奖励</string>
+    <string name="basic_fare">基础车费</string>
+    <string name="journal_detail">流水明细</string>
+    <string name="journal_total_order">共%d条</string>
+    <string name="journal_money">%s元</string>
+    <string name="net_error_tip">网络开小差啦~</string>
+    <string name="click_reload">点击重试</string>
+    <string name="rish_order">风险单</string>
+    <string name="float_feedback">求助\n反馈</string>
+    <string name="upload_pic">图片上传:</string>
+    <string name="feedback_hint">请说说你的建议和遇到的问题？</string>
+    <string name="submit">提交</string>
+    <string name="feedback_record">反馈记录</string>
+    <string name="feedback_max_length">最长支持输入100个字</string>
+    <string name="add_picture">添加图片</string>
+    <string name="total_mile">累计里程</string>
+    <string name="feedback_details">反馈详情</string>
+    <string name="cross_city_tips">提示：系统检测到您当前订单已跨城，请及时与客服报备。</string>
+    <string name="gaode_in_service">和形约车提醒您已接高德订单,是否将和形约车收车</string>
+    <string name="gaode_not_in_service">和形约车提醒您高德订单已结束,是否需要出砗</string>
+    <string name="duty_off_remind">收车提醒</string>
+    <string name="duty_on_remind">出车提醒</string>
+    <string name="gaode_in_service_remind">系统检测到您已接高德订单，是否将和行约车收车!</string>
+    <string name="gaode_not_in_service_remind">高德订单已结束，是否需要出车!</string>
+    <string name="work">出车</string>
+    <string name="work_awake">出车唤醒</string>
+    <string name="work_awake_remind">当前未出车,抓紧出车接单吧</string>
+    <string name="know">知道了</string>
+    <string name="remind_abnormal">系统检测到您当前短单长跑，请及时与客服报备</string>
+    <string name="remind_cross_city">系统检测到您当前订单已跨城，请及时与客服报备</string>
+    <string name="Tips">提示</string>
+    <string name="tips_order_abnormal">当前订单已被标记成异常订单，请在确认费用后提醒乘客及时支付费用，避免影响您的流水。</string>
+    <string name="change_address_normal">目的地已修改为%1$s</string>
+    <string name="change_address_navigation">目的地已修改为%1$s，已重新为您规划导航</string>
+
+    <!--sweet_alert-->
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+</resources>

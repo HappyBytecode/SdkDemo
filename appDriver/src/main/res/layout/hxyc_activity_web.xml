@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/web_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head_view" />
+
+    <ImageView
+        android:id="@+id/iv_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_view"
+        android:background="@color/sel_bg_white_primary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:drawableTop="@drawable/net_placeholder"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/net_error_tip"
+            android:textColor="@color/item_gray_primary"
+            android:textSize="@dimen/text_size_middle" />
+
+        <TextView
+            android:id="@+id/tv_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/click_reload"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_middle" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/head_view"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressDrawable="@drawable/web_progress_bar"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

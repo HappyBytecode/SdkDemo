@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#5d9eff</color>
+    <color name="colorPrimaryDark">#5485ff</color>
+    <color name="colorAccent">#5d9eff</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorBg">#f2f3f4</color>
+
+    <color name="red">@android:color/holo_red_dark</color>
+    <color name="blue_4f5a67">#4f5a67</color>
+    <color name="blue_6b7886">#6b7886</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+
+    <!-- 启动页状态栏的颜色 -->
+    <color name="launch_title_color">@android:color/white</color>
+
+    <!-- 分割线颜色 -->
+    <color name="line">#e1e1e5</color>
+
+    <!--新主题颜色-->
+    <color name="color_primary">#5485FF</color>
+    <color name="color_accent">#5485FF</color>
+    <color name="color_text_light">#babdcd</color>
+    <color name="color_text_dark">#2d2e33</color>
+    <color name="color_text_grey">#8b8e9c</color>
+
+    <!-- HeadView -->
+    <color name="head_view_center_textcolor">#FFFFFF</color>
+    <color name="head_view_right_textcolor">#FFFFFF</color>
+    <color name="head_view_center_black">#24293A</color>
+    <color name="head_view_background">#363E53</color>
+
+    <!-- 主色 -->
+    <color name="main_black">#363E53</color>
+
+    <!-- 字体颜色 -->
+    <color name="text_grey">#808080</color>
+    <!-- 分割线颜色 -->
+    <color name="line_f2f5f5">#F2F5F5</color>
+
+    <!-- duty相关 -->
+    <color name="duty_center">#5d9eff</color>
+
+    <color name="text_4f5a67">#4f5a67</color>
+
+    <!-- 开关相关 -->
+    <color name="lisenter_check_bar">#5272aa</color>
+
+    <color name="common_white">#FFFFFF</color>
+    <color name="common_white_pressed">#EEE</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_aid_primary">#757575</color>
+    <color name="text_aid_minor">#a7aab5</color>
+    <color name="divide_line">#ebe9ee</color>
+    <color name="primary">#3E88F5</color>
+    <color name="gray">#808080</color>
+
+    <!-- 主色 -->
+    <color name="main_grey">#A7AAB5</color>
+    <color name="main_bg">#F2F5F5</color>
+
+    <color name="message_unselect">#5D6378</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="violet_514d76">#514D76</color>
+    <color name="color_8b8e9c">#8B8E9C</color>
+    <color name="color_6989F1">#ff6989F1</color>
+
+    <color name="black_900">#000000</color>
+
+    <!--2.0.1改版-->
+    <color name="home_bg_black">#4d4954</color>
+    <color name="home_bg_gray">#F2F2F2</color>
+    <color name="home_blue">#7A6FF2</color>
+    <color name="color_text_white">#fefefe</color>
+
+    <color name="notice_black">#333333</color>
+    <color name="notice_orange">#FF7E74</color>
+    <color name="notice_cancel">#9A9A9A</color>
+    <color name="notice_confirm">#64B6EE</color>
+
+    <!--sweet_alert-->
+    <color name="float_transparent">#00000000</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+
+    <!--3.0.0改版-->
+    <color name="hx_statusBar_background">#363E53</color>
+    <color name="item_gray_primary">#808080</color>
+    <color name="item_orange_primary">#F3A006</color>
+    <color name="item_black_primary">#5A6077</color>
+    <color name="item_black_light">#252A3A</color>
+    <color name="item_order_green">#40B296</color>
+    <color name="item_order_blue">#5486FF</color>
+    <color name="popup_item_line">#F2F2F2</color>
+    <color name="popup_item_un_choose">#24293A</color>
+    <color name="popup_item_choose">#5485FF</color>
+    <color name="order_black_primary_dark">#242A3A</color>
+    <color name="order_detail_blue">#5E9EFF</color>
+    <color name="gradient_blue_start">#76A6FF</color>
+    <color name="gradient_blue_end">#4488FF</color>
+    <color name="sel_bg_gray">#E6E6E6</color>
+    <color name="sel_bg_white_primary">#f7f7f7</color>
+    <color name="order_fee_tag">#3FB195</color>
+    <color name="complain_gray">#B3B3B3</color>
+    <color name="slide_switch_bg">#24262E</color>
+    <color name="slide_switch_select">#4387FF</color>
+    <color name="listener_check_black">#242939</color>
+    <color name="listener_check_red">#EA3324</color>
+    <color name="listener_check_green">#00C47A</color>
+    <color name="tab_un_select">#5D6379</color>
+    <color name="describe_black">#4D4D4D</color>
+    <color name="text_black">#5A6076</color>
+    <color name="main_bg_black">#272B33</color>
+    <color name="main_gray_primary">#989EAD</color>
+    <color name="duty_btn_dark">#555D70</color>
+    <color name="home_message_title">#262626</color>
+    <color name="journal_black_dark">#24293A</color>
+    <color name="journal_black_light">#5A6076</color>
+    <color name="journal_gray_light">#b3b3b3</color>
+    <color name="journal_gray_time">#808080</color>
+    <color name="text_black_primary">#595F75</color>
+    <color name="order_ongoing_blue">#5385FF</color>
+    <color name="order_ongoing_black">#232939</color>
+    <color name="green_car">#00c379</color>
+    <color name="bg_dark">#2A2239</color>
+    <color name="cross_city_red">#FA2800</color>
+    <color name="dialog_bg">#80000000</color>
+    <color name="picture_color_f2">#F2F2F2</color>
+
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sel_bg_white_primary"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/my_journal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_13"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_choice_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dra_white_radius_big"
+                android:drawableRight="@drawable/icon_arrow_down_triangle"
+                android:drawablePadding="@dimen/padding_5"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
+                android:textColor="@color/popup_item_un_choose"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                tools:text="xxxx年xx月xx日" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="@string/from_to_end"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_choice_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dra_white_radius_big"
+                android:drawableRight="@drawable/icon_arrow_down_triangle"
+                android:drawablePadding="@dimen/padding_10"
+                android:paddingStart="@dimen/padding_5"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
+                android:textColor="@color/popup_item_un_choose"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                tools:text="xxxx年xx月xx日" />
+
+        </LinearLayout>
+
+        <anda.travel.driver.widget.layout.BaseLinearLayout
+            android:id="@+id/journal_baselayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_13"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_7"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_total_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_big" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unit"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25">
+
+                <TextView
+                    android:id="@+id/tv_basic_fare_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/anda_icon_ring"
+                    android:drawablePadding="@dimen/margin_6"
+                    android:text="@string/basic_fare"
+                    android:textColor="@color/journal_black_light"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_basic_fare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00元"
+                    android:textColor="@color/journal_black_light"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_basic_fare_tag"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_award_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_27"
+                    android:drawableStart="@drawable/anda_icon_ring"
+                    android:drawablePadding="@dimen/margin_6"
+                    android:text="@string/reward"
+                    android:textColor="@color/journal_black_light"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_basic_fare_tag"
+                    app:layout_constraintTop_toBottomOf="@id/tv_basic_fare_tag" />
+
+                <TextView
+                    android:id="@+id/tv_award_fare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00元"
+                    android:textColor="@color/journal_black_light"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="@id/tv_basic_fare"
+                    app:layout_constraintTop_toBottomOf="@id/tv_basic_fare"
+                    app:layout_constraintTop_toTopOf="@id/tv_award_tag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </anda.travel.driver.widget.layout.BaseLinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_journal_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:drawableStart="@drawable/prefix_blue"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="@string/journal_detail"
+                    android:textColor="@color/journal_black_dark"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_order_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:text="共0条"
+                    android:textColor="@color/journal_gray_light"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_journal_detail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                style="@style/LineViewStyleNew"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_14" />
+
+            <anda.travel.driver.baselibrary.view.refreshview.ExRefreshView
+                android:id="@+id/refresh_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

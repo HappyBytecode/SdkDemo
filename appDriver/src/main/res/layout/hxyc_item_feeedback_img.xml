@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="76dp"
+    android:layout_height="89dp">
+
+    <ImageView
+        android:id="@+id/img_feedback"
+        android:layout_width="67dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_marginEnd="@dimen/margin_3"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/feedback_del" />
+
+    <LinearLayout
+        android:id="@+id/layout_add"
+        android:layout_width="67dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sel_bg_gray"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feedback_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_13"
+            android:text="@string/add_picture"
+            android:textColor="@color/item_gray_primary"
+            android:textSize="@dimen/text_size_small" />
+
+    </LinearLayout>
+
+</RelativeLayout>

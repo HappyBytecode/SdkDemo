@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_empty"
+        style="@style/TextStyle.Empty.NEW"
+        android:layout_gravity="center_horizontal"
+        android:drawableTop="@drawable/empty_msg_placeholder"
+        android:text="@string/nomessage" />
+
+    <anda.travel.driver.baselibrary.view.refreshview.ExRefreshView
+        android:id="@+id/ex_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
+
+
+

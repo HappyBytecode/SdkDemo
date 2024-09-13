@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".module.main.mine.walletnew.balancedetail.BalanceDetailActivity">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="余额明细" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_choice_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/icon_arrow_down_triangle"
+            android:drawablePadding="@dimen/padding_5"
+            android:onClick="onClick"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_15"
+            android:paddingEnd="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_15"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_middle"
+            tools:text="2020年10月11日" />
+
+        <anda.travel.driver.widget.EnhanceTabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/color_accent"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorWidth="49dp"
+            app:tabSelectTextColor="@color/color_accent"
+            app:tabTextColor="@color/text_grey"
+            app:tab_Mode="mode_fixed" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_3"
+        android:background="@color/picture_color_f2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_empty"
+            style="@style/TextStyle.Empty.NEW"
+            android:layout_gravity="center_horizontal"
+            android:drawableTop="@drawable/empty_order_placeholder"
+            android:text="@string/empty_notice" />
+
+        <ViewStub
+            android:id="@+id/vs_net_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout="@layout/hxyc_layout_net_error" />
+
+        <anda.travel.driver.baselibrary.view.refreshview.ExRefreshView
+            android:id="@+id/ex_refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_25"
+        android:background="@drawable/sel_tag"
+        android:ellipsize="end"
+        android:paddingStart="@dimen/padding_23"
+        android:paddingTop="@dimen/padding_20"
+        android:paddingBottom="@dimen/padding_20"
+        android:singleLine="true"
+        android:textColor="@color/item_black_primary"
+        android:textSize="@dimen/text_size_normal"
+        tools:ignore="RtlSymmetry"
+        tools:text="取消原因" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_30"
+        android:paddingEnd="@dimen/padding_30">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/violet_514d76"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="系统信息"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dispatch_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:lineSpacingExtra="@dimen/margin_6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_16"
+                        android:textStyle="bold"
+                        tools:text="您所在的区域订单较少，建议您在40分钟内前往两公里外的政府大厦等单" />
+                </LinearLayout>
+
+                <com.amap.api.maps.TextureMapView
+                    android:id="@+id/dispatch_map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_margin="@dimen/margin_10">
+
+                </com.amap.api.maps.TextureMapView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20">
+
+            <LinearLayout
+                android:id="@+id/dispatch_go2navi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@drawable/bluegradual"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bluenavigation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/navito"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dispatch_ikonw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_10"
+                android:text="@string/iknow"
+                android:textColor="@color/color_8b8e9c"
+                android:textSize="@dimen/textsize_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dispatch_await"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                android:text="@string/iknow"
+                android:textColor="@color/color_8b8e9c"
+                android:textSize="@dimen/textsize_20"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

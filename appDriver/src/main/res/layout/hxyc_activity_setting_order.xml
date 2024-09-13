@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_black"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_setting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/mode_setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_setting_close"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:padding="2dp"
+                android:src="@drawable/icon_white_close"
+                app:layout_constraintBottom_toBottomOf="@id/tv_setting_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_setting_title" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_real_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_54"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:textColor="@color/custom_text_state_color"
+                app:kswAnimationDuration="200"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswTextAdjust="-5dp"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-9dp"
+                app:kswThumbMarginLeft="-6dp"
+                app:kswThumbMarginRight="-6dp"
+                app:kswThumbMarginTop="-3dp"
+                app:kswThumbRangeRatio="1.4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_title" />
+
+            <TextView
+                android:id="@+id/tv_setting_real_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:text="@string/order_real_time"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sb_real_time" />
+
+            <TextView
+                android:id="@+id/tv_setting_real_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/setting_order_real_label"
+                android:textColor="@color/complain_gray"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_real_time" />
+
+            <anda.travel.driver.widget.slide.SlideSwitch
+                android:id="@+id/ss_setting_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_real_label"
+                app:position="0"
+                app:titles="@array/order_setting_type" />
+
+            <View
+                android:id="@+id/divide_line_one"
+                android:layout_width="match_parent"
+                android:layout_height="0.67dp"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_28"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@color/item_gray_primary"
+                app:layout_constraintTop_toBottomOf="@id/ss_setting_mode" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_28"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:textColor="@color/custom_text_state_color"
+                app:kswAnimationDuration="200"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswTextAdjust="-5dp"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-9dp"
+                app:kswThumbMarginLeft="-6dp"
+                app:kswThumbMarginRight="-6dp"
+                app:kswThumbMarginTop="-3dp"
+                app:kswThumbRangeRatio="1.4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divide_line_one" />
+
+            <TextView
+                android:id="@+id/tv_setting_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:text="@string/order_appointment"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sb_appointment" />
+
+            <TextView
+                android:id="@+id/tv_setting_appointment_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/setting_appointment_label"
+                android:textColor="@color/complain_gray"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_appointment" />
+
+            <LinearLayout
+                android:id="@+id/lay_appointment_start"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/dra_setting_order"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/tv_from_to_end"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_appointment_label">
+
+                <TextView
+                    android:id="@+id/tv_appointment_start"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="从现在"
+                    android:textColor="@color/complain_gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:id="@+id/iv_start_close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:src="@drawable/icon_setting_close"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_from_to_end"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/from_to_end"
+                android:textColor="@color/color_text_white"
+                app:layout_constraintBottom_toBottomOf="@id/lay_appointment_start"
+                app:layout_constraintEnd_toStartOf="@id/lay_appointment_end"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toEndOf="@id/lay_appointment_start"
+                app:layout_constraintTop_toTopOf="@id/lay_appointment_start" />
+
+            <LinearLayout
+                android:id="@+id/lay_appointment_end"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/dra_setting_order"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toEndOf="@id/tv_from_to_end"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_appointment_label">
+
+                <TextView
+                    android:id="@+id/tv_appointment_end"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="任意时间"
+                    android:textColor="@color/complain_gray"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <ImageView
+                    android:id="@+id/iv_end_close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:src="@drawable/icon_setting_close"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divide_line_two"
+                android:layout_width="match_parent"
+                android:layout_height="0.67dp"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_28"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@color/item_gray_primary"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/lay_appointment_end" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_28"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:textColor="@color/custom_text_state_color"
+                android:visibility="gone"
+                app:kswAnimationDuration="200"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswTextAdjust="-5dp"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-9dp"
+                app:kswThumbMarginLeft="-6dp"
+                app:kswThumbMarginRight="-6dp"
+                app:kswThumbMarginTop="-3dp"
+                app:kswThumbRangeRatio="1.4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divide_line_two" />
+
+            <TextView
+                android:id="@+id/tv_setting_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_28"
+                android:layout_marginBottom="@dimen/margin_40"
+                android:text="@string/order_navi_voice"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sb_voice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_save"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_54"
+            android:background="@drawable/bg_rec_gradient_blue"
+            android:gravity="center"
+            android:text="@string/setting_save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

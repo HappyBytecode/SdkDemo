@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/padding_20">
+
+    <TextView
+        android:id="@+id/rule_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_31"
+        android:textColor="@color/order_black_primary_dark"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold"
+        tools:text="收入分成规则" />
+
+    <TextView
+        android:id="@+id/rule_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/item_black_primary"
+        android:textSize="@dimen/text_size_middle"
+        tools:text="每周三可以提现" />
+
+    <View
+        android:id="@+id/rule_line"
+        style="@style/LineViewStyle"
+        android:layout_marginTop="@dimen/margin_31" />
+
+</LinearLayout>

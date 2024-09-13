@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.navi.AMapNaviView
+        android:id="@+id/navi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:background="@drawable/dra_custom_navi_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--左右转向的图标-->
+        <com.amap.api.navi.view.NextTurnTipView
+            android:id="@+id/mNextTurnTipView"
+            android:layout_width="60.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="@dimen/margin_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--剩余的公里数-->
+        <TextView
+            android:id="@+id/text_next_road_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/text_next_road_name"
+            app:layout_constraintStart_toEndOf="@id/mNextTurnTipView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="300米后" />
+
+        <!--组件： 下一路路名-->
+        <TextView
+            android:id="@+id/text_next_road_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_toEndOf="@id/mNextTurnTipView"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mNextTurnTipView"
+            app:layout_constraintTop_toBottomOf="@id/text_next_road_distance"
+            tools:text="始信路" />
+
+        <!--组件： 进入-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:gravity="center"
+            android:text="进入"
+            android:textColor="#676B70"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintStart_toEndOf="@id/text_next_road_distance"
+            app:layout_constraintTop_toTopOf="@id/text_next_road_distance" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 车道信息 -->
+    <com.amap.api.navi.view.DriveWayView
+        android:id="@+id/myDriveWayView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"/>
+
+    <com.amap.api.navi.view.TrafficProgressBar
+        android:id="@+id/myTrafficBar"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="200dp" />
+
+    <TextView
+        android:id="@+id/change_road"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/notice_white_bg"
+        android:drawableTop="@drawable/ic_main_road"
+        android:drawablePadding="@dimen/padding_2"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/padding_10"
+        android:paddingVertical="@dimen/padding_8"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="在辅路" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/dra_order_ongoing_whitefillet"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/tv_trip_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_18"
+            android:text="计算中"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_trip_distance"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="费用"
+            android:textColor="@color/complain_gray"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_price"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_price"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_price" />
+
+        <TextView
+            android:id="@+id/tv_trip_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算中"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_trip_duration"
+            app:layout_constraintStart_toEndOf="@id/tv_trip_price"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="剩余里程"
+            android:textColor="@color/complain_gray"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_distance"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_distance"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_distance" />
+
+        <TextView
+            android:id="@+id/tv_trip_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_18"
+            android:text="计算中"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_trip_distance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="预计时长"
+            android:textColor="@color/complain_gray"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="@id/tv_trip_duration"
+            app:layout_constraintStart_toStartOf="@id/tv_trip_duration"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_duration" />
+
+        <View
+            android:id="@+id/line"
+            style="@style/LineViewStyle"
+            android:layout_marginTop="@dimen/margin_5"
+            app:layout_constraintBottom_toTopOf="@+id/iv_quit_navigation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_price" />
+
+        <ImageView
+            android:id="@+id/iv_quit_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_27"
+            android:src="@drawable/ic_quit_navigation"
+            app:layout_constraintBottom_toBottomOf="@+id/sb_voice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sb_voice" />
+
+        <TextView
+            android:id="@+id/tv_quit_navigation"
+            style="@style/OrderTextStyleNormalBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_10"
+            android:text="@string/quit_navigation"
+            app:layout_constraintBottom_toBottomOf="@+id/sb_voice"
+            app:layout_constraintStart_toEndOf="@id/iv_quit_navigation"
+            app:layout_constraintTop_toTopOf="@+id/sb_voice" />
+
+        <View
+            android:id="@+id/divide_line"
+            style="@style/LineViewStyle_Vertical"
+            android:layout_height="34dp"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/bg_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_quit_navigation"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/navigation_concise"
+            style="@style/OrderTextStyleNormalBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="@string/navigationconcise"
+            app:layout_constraintBottom_toBottomOf="@+id/sb_voice"
+            app:layout_constraintStart_toEndOf="@id/divide_line"
+            app:layout_constraintTop_toTopOf="@+id/sb_voice" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/custom_text_state_color"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswTextAdjust="-5dp"
+            app:kswThumbDrawable="@drawable/ios_thumb_selector"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp"
+            app:kswThumbRangeRatio="1.4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navigation_concise"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <anda.travel.driver.widget.slide.SlideView
+        android:id="@+id/slide_view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
+
+

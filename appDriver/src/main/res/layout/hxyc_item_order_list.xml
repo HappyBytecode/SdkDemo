@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardForegroundColor="@color/transparent"
+    app:contentPadding="@dimen/margin_large">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3"
+            android:textColor="@color/item_gray_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="8月27日 12:30" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:background="@drawable/r4_border_plate"
+            android:paddingLeft="@dimen/padding_7"
+            android:paddingTop="@dimen/padding_4"
+            android:paddingRight="@dimen/padding_7"
+            android:paddingBottom="@dimen/padding_4"
+            android:text="@string/rish_order"
+            android:textColor="@color/item_orange_primary"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/tv_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_black_primary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_time"
+            tools:text="未开始" />
+
+        <TextView
+            android:id="@+id/tv_for_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_13"
+            android:background="@drawable/bg_order_btn_blue"
+            android:paddingHorizontal="@dimen/padding_16"
+            android:paddingVertical="@dimen/padding_5"
+            android:text="催付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintEnd_toEndOf="@id/tv_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:drawableStart="@drawable/anda_icon_start"
+            android:drawablePadding="@dimen/margin_middle"
+            android:ellipsize="end"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColor="@color/item_black_light"
+            app:layout_constraintEnd_toStartOf="@id/tv_for_payment"
+            app:layout_constraintStart_toStartOf="@id/tv_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_time"
+            tools:text="软件园二期" />
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:drawableStart="@drawable/anda_icon_end"
+            android:drawablePadding="@dimen/margin_middle"
+            android:ellipsize="end"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColor="@color/item_black_light"
+            app:layout_constraintEnd_toStartOf="@id/tv_price"
+            app:layout_constraintStart_toStartOf="@id/tv_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_start"
+            tools:text="国际会展中心" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_black_light"
+            android:textSize="@dimen/text_size_middle"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_end"
+            tools:text="18.00元" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

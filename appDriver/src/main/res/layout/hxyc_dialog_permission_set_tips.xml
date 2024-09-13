@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/notice_white_bg"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tips_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="权限获取提示"
+        android:textColor="@color/item_black_light"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tips_small_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="定位" />
+
+    <TextView
+        android:id="@+id/tips_small_content1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="12sp"
+        tools:text="您需要同意始终允许开启定位权限，以便您能在后台继续使用和行约车司机端" />
+
+    <TextView
+        android:id="@+id/tips_small_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="存储" />
+
+    <TextView
+        android:id="@+id/tips_small_content2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text=".您需要同意开启存储权限，以便服务数据能顺利保存至您的手机" />
+
+    <TextView
+        android:id="@+id/tips_small_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="拍照" />
+
+    <TextView
+        android:id="@+id/tips_small_content3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="您需要同意开启拍照权限，以便您能顺利扫脸出车和上传资料" />
+
+    <TextView
+        android:id="@+id/tips_small_title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="麦克风" />
+
+    <TextView
+        android:id="@+id/tips_small_content4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/item_black_light"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="您需要同意开启麦克风权限，以便您能联系乘客" />
+
+    <TextView
+        android:id="@+id/tips_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/dialog_btn_tips"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+</LinearLayout>

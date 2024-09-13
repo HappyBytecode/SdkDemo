@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:title_text="@string/advice_feedback" />
+
+    <anda.travel.driver.widget.layout.BaseLinearLayout
+        android:id="@+id/lay_feedback_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_20"
+        android:paddingTop="@dimen/padding_20"
+        android:paddingBottom="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_pic"
+            android:textColor="@color/popup_item_un_choose"
+            android:textSize="@dimen/text_size_middle"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:minHeight="80dp" />
+    </anda.travel.driver.widget.layout.BaseLinearLayout>
+
+    <anda.travel.driver.widget.layout.BaseLinearLayout
+        android:id="@+id/lay_advice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_20">
+
+        <EditText
+            android:id="@+id/et_advice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:focusable="true"
+            android:gravity="top"
+            android:hint="@string/feedback_hint"
+            android:minHeight="90dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/item_gray_primary"
+            android:textColorHint="@color/item_gray_primary"
+            android:textSize="14sp" />
+    </anda.travel.driver.widget.layout.BaseLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/bg_rec_gradient_blue"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/tv_records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_23"
+        android:text="@string/feedback_record"
+        android:textColor="@color/popup_item_choose"
+        android:textSize="@dimen/text_size_middle" />
+</LinearLayout>
+
+
+

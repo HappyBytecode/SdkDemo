@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <!--    //高德地图-->
+    <string name="amap_id">8b9b72c9aba21821662596b216b5ed3a</string>
+</resources>

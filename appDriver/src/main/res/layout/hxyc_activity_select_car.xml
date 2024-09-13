@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/setting_select_car" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <anda.travel.driver.widget.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_100"
+                android:layout_marginTop="@dimen/margin_30"
+                android:background="@drawable/my_siji_morentouxian" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColor="@color/text_4f5a67"
+                android:textSize="@dimen/textsize_25"
+                tools:text="张士超" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="请输入要出车的车牌号"
+                android:textSize="@dimen/textsize_15" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="@dimen/default_btn_height"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/r4_side_white_border_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <anda.travel.driver.baselibrary.view.TextViewPlus
+                    android:id="@+id/tv_belong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/arrow_btn_down"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/car_prefix"
+                    android:textColor="#212121"
+                    android:textSize="@dimen/textsize_16"
+                    app:right_height="16dp"
+                    app:right_width="16dp" />
+
+                <EditText
+                    android:id="@+id/ed_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="车牌号"
+                    android:maxLength="6"
+                    android:textColor="#212121"
+                    android:textColorHint="#BDBDBD"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit"
+                style="@style/Widget.App.Button.Common"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:enabled="false"
+                android:text="确定" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

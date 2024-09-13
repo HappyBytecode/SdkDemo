@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <anda.travel.driver.widget.layout.BaseLinearLayout
+            android:id="@+id/order_detail_base"
+            style="@style/CardWrapLayout">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_gray_primary"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                tools:text="3月13日 13:30" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/item_black_light"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1234" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="尾号"
+                    android:textColor="@color/item_black_light"
+                    app:layout_constraintEnd_toEndOf="@id/tv_name"
+                    app:layout_constraintStart_toStartOf="@id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:drawableStart="@drawable/anda_icon_start"
+                    android:drawablePadding="@dimen/margin_middle"
+                    android:ellipsize="end"
+                    android:paddingStart="3dp"
+                    android:singleLine="true"
+                    android:textColor="@color/item_black_light"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="软件园二期" />
+
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:drawableStart="@drawable/anda_icon_end"
+                    android:drawablePadding="@dimen/margin_middle"
+                    android:ellipsize="end"
+                    android:paddingStart="3dp"
+                    android:singleLine="true"
+                    android:textColor="@color/item_black_light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_start"
+                    app:layout_constraintTop_toBottomOf="@id/tv_start"
+                    tools:text="国际会展中心" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tfl_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </anda.travel.driver.widget.layout.BaseLinearLayout>
+
+        <anda.travel.driver.widget.layout.BaseLinearLayout
+            android:id="@+id/order_detail_status"
+            style="@style/CardWrapLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_order_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/order_detail_blue"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="预约单" />
+
+                <TextView
+                    android:id="@+id/btn_for_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dra_bg_order_btn_blue"
+                    android:paddingStart="@dimen/padding_27"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_27"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:text="@string/order_for_payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btn_payment_for_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:background="@drawable/dra_bg_order_btn_blue"
+                    android:paddingStart="@dimen/padding_13"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_13"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:text="@string/btn_payment_for_other"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/btn_for_payment"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/item_black_light"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_status"
+                    tools:text="31.02" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:paddingEnd="@dimen/padding_20"
+                    android:text="@string/price_yuan"
+                    android:textColor="@color/item_black_light"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/tv_trip_message"
+                    app:layout_constraintStart_toEndOf="@id/tv_price"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_status" />
+
+                <TextView
+                    android:id="@+id/tv_trip_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:textColor="@color/item_black_primary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@id/tv_unit"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_status"
+                    tools:text="行程已完成，费用已支付" />
+
+                <TextView
+                    android:id="@+id/tv_switch_show_fare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_28"
+                    android:drawableRight="@drawable/icon_order_detail_down"
+                    android:drawablePadding="@dimen/padding_3"
+                    android:text="@string/order_open_detail"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_status" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fee_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20" />
+
+                <View
+                    style="@style/LineViewStyleDark"
+                    android:background="@color/sel_bg_gray" />
+
+                <TextView
+                    android:id="@+id/tv_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:drawableStart="@drawable/icon_guize"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:text="@string/price_rule"
+                    android:textColor="@color/item_gray_primary"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+        </anda.travel.driver.widget.layout.BaseLinearLayout>
+
+        <anda.travel.driver.widget.layout.BaseLinearLayout
+            android:id="@+id/order_detail_service"
+            style="@style/CardWrapLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/order_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_service"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/online_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/contact_center"
+                    android:textColor="@color/order_black_primary_dark"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/order_service"
+                    app:layout_constraintTop_toBottomOf="@+id/order_service_explain"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/order_service_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="@string/order_service_explain"
+                    android:textColor="@color/item_black_primary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/online_service"
+                    app:layout_constraintTop_toBottomOf="@id/online_service" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20">
+
+                <TextView
+                    android:id="@+id/tv_complaint"
+                    android:layout_width="122dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/dra_bg_order_btn_dark"
+                    android:gravity="center"
+                    android:text="@string/order_detail_btn_complain"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tv_call_service"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_call_service"
+                    android:layout_width="122dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/dra_bg_order_btn_dark"
+                    android:gravity="center"
+                    android:text="@string/contact_customer_service"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_complaint"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </anda.travel.driver.widget.layout.BaseLinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="anda.travel.driver">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 环信IM 额外需要的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 忽略省电优化 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 移动需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 用户组件导航页蓝牙设备连接提醒 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 适配10.0后台定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="false"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true">
+        <activity android:name=".module.main.mine.setting.platformRule.PlatformRuleActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <activity
+            android:name=".module.launch.LaunchActivity"
+            android:theme="@style/Theme.Launch" />
+        <activity
+            android:name=".module.RemindActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/dialogstyle" />
+        <activity android:name=".module.web.WebActivity" />
+        <activity android:name=".common.CommonActivity" />
+        <activity
+            android:name=".module.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module.main.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".module.main.mine.message.MessageActivity" />
+        <activity android:name=".module.main.mine.message.MessageDetailActivity" />
+        <activity android:name=".module.car.SelectCarActivity" />
+        <!-- 订单弹窗页(新订单) -->
+        <activity
+            android:name=".module.order.popup.OrderPopupActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.NewOrder" />
+        <!-- 预约单，订单未开始 -->
+        <activity
+            android:name=".module.order.begin.OrderBeginActivity"
+            android:launchMode="singleTask" />
+        <!-- 进行中订单页 -->
+        <activity
+            android:name=".module.order.ongoing.OrderOngoingActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Navi" />
+        <!-- 订单详情 -->
+        <activity
+            android:name=".module.order.detail.OrderDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.amap.navi.SingleRouteCalculateActivity"
+            android:theme="@style/Theme.Navi" />
+        <!-- 投诉页 -->
+        <activity android:name=".module.order.complain.OrderComplainActivity" />
+        <!-- 取消页 -->
+        <activity android:name=".module.order.cancel.OrderCancelActivity" />
+        <!-- (出租车/专车)费用明细页 -->
+        <!-- (专车)费用确认页 -->
+        <activity
+            android:name=".module.order.price.PriceCheckActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".module.main.mine.journal.JournalActivity" />
+        <activity android:name=".module.main.mine.setting.SettingActivity" />
+        <activity android:name=".module.main.mine.help.HelpCenterActivity" />
+        <activity android:name=".module.main.mine.setting.about.AboutActivity" />
+        <activity android:name=".module.main.mine.help.feedback.FeedbackActivity" />
+        <activity android:name=".module.main.mine.help.problem.ProblemActivity" />
+        <activity android:name=".module.main.mine.carinfo.CarInfoActivity" />
+        <activity android:name=".module.main.mine.carinfo.mile.MileActivity" />
+        <activity android:name=".module.task.TaskListActivity" />
+        <activity android:name=".module.task.TaskDetailActivity" />
+        <!-- 听单检测 -->
+        <activity android:name=".module.main.mine.help.check.ListenerCheckActivity" />
+        <!-- 订单播报 -->
+        <activity android:name=".module.report.ReportActivity" />
+        <!-- 系统公告 -->
+        <activity android:name=".module.notice.list.NoticeListActivity" />
+        <activity android:name=".module.notice.NoticeDetailActivity" />
+        <!-- 调度页 -->
+        <activity
+            android:name=".module.dispatch.DispatchActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Navi" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:replace="android:theme" />
+
+        <service android:name=".socket.SocketService" />
+        <service android:name=".service.RecordingService" />
+        <service android:name="com.amap.api.location.APSService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.hxyc.driver"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".module.web.H5Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".module.amap.heatmap.HeatMapActivity" />
+        <activity android:name=".module.dispatch.dialog.DispatchDialogActivity" />
+        <activity android:name=".module.main.orderlist.OrderListActivity" />
+        <activity android:name=".module.order.setting.SettingOrderActivity" />
+        <activity android:name=".module.amap.navi.SingleNavigateActivity" />
+        <activity android:name=".module.main.center.UserCenterActivity" />
+        <activity android:name=".module.feedback.list.FeedBackListActivity" />
+        <activity android:name=".module.feedback.details.FeedBackDetailsActivity" />
+        <activity android:name=".module.main.mine.walletnew.MyWalletNewActivity" />
+        <activity android:name=".module.main.mine.walletnew.withdrawal.WithdrawalActivity" />
+        <activity android:name=".module.main.mine.walletnew.withdrawal.withdrawalrecord.WithdrawalRecordActivity" />
+        <activity android:name=".module.main.mine.walletnew.withdrawal.withdrawalrecord.withdrawldetails.WithdrawDetailsActivity" />
+        <activity android:name=".module.main.mine.walletnew.withdrawal.bindalipay.BindAliPayActivity" />
+        <activity android:name=".module.main.mine.walletnew.rules.RulesActivity" />
+        <activity android:name=".module.main.mine.walletnew.withdrawal.bindalipay.modify.BindAliPayModifyActivity" />
+        <activity android:name=".module.main.mine.walletnew.balancedetail.BalanceDetailActivity" />
+    </application>
+
+</manifest>

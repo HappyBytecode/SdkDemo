@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:paddingBottom="@dimen/margin_20">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        android:text="请输入验证码"
+        android:textColor="@color/journal_black_dark"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_15"
+        android:src="@drawable/icon_main_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <anda.travel.driver.widget.codeinput.VerificationCodeInputView
+        android:id="@+id/et_code_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:vciv_et_background="@drawable/sel_code_bg"
+        app:vciv_et_height="50dp"
+        app:vciv_et_spacing="@dimen/margin_15"
+        app:vciv_et_text_color="@color/journal_black_dark"
+        app:vciv_et_text_size="@dimen/text_size_middle"
+        app:vciv_et_width="50dp" />
+
+    <TextView
+        android:id="@+id/tv_click_get_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_code_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

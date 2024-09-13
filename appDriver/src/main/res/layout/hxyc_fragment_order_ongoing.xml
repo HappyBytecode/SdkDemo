@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_visible="false"
+        app:right_text="更多"
+        app:right_visible="true"
+        app:title_text="接乘客" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_20"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lay_mileage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    style="@style/OrderTextStyleTitleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/OrderTextStyleNormalBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_2"
+                    android:text="@string/price_yuan"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_cost"
+                    app:layout_constraintStart_toEndOf="@id/tv_cost" />
+
+                <TextView
+                    style="@style/OrderTextStyleSmallGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="@string/fare"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cost" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lay_duration"
+                app:layout_constraintStart_toEndOf="@id/lay_price"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_mileage"
+                    style="@style/OrderTextStyleTitleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_mileage_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_2"
+                    android:text="公里"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_mileage"
+                    app:layout_constraintStart_toEndOf="@id/tv_mileage" />
+
+                <TextView
+                    style="@style/OrderTextStyleSmallGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="剩余里程"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_mileage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lay_mileage"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    style="@style/OrderTextStyleTitleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_duration_unit"
+                    style="@style/OrderTextStyleNormalBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_2"
+                    android:text="@string/unit_minute"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_duration"
+                    app:layout_constraintStart_toEndOf="@id/tv_duration" />
+
+                <TextView
+                    style="@style/OrderTextStyleSmallGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="预计时长"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_duration" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_order_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/padding_20"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/layout_sub">
+
+            <View
+                style="@style/LineViewStyleNew"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_top_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/barrier_msg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="厦门市会展中心南五路厦门市会展中心" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="tv_top_address" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:background="#E5E5E5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_navigation"
+                app:layout_constraintStart_toEndOf="@+id/barrier_msg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layout_navigation_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/tv_top_address"
+                app:layout_constraintTop_toBottomOf="@id/tv_top_address">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余"
+                    android:textColor="@color/text_black_primary"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:id="@+id/tv_get_passenger_mileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_2"
+                    android:text="@string/order_navi_distance_calculating"
+                    android:textColor="@color/order_ongoing_blue"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_get_passenger_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@string/order_navi_time_calculating"
+                    android:textColor="@color/order_ongoing_blue"
+                    android:textSize="@dimen/text_size_middle"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:drawableTop="@drawable/icon_navigation"
+                android:text="开始导航"
+                android:textColor="@color/order_ongoing_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_late"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_18"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_wait_no_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="已到达上车点,5分钟后可以迟到计费" />
+
+            <TextView
+                android:id="@+id/tv_wait_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:text="已到达乘客上车点"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_middle"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_wait_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_middle"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_wait_tips"
+                tools:text="乘客超时，点击开始计费" />
+
+            <TextView
+                android:id="@+id/tv_late_operate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/dra_order_tag"
+                android:paddingStart="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_20"
+                android:paddingBottom="@dimen/padding_10"
+                android:text="迟到计费"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_abnormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="@dimen/margin_23"
+            android:layout_marginEnd="@dimen/margin_25"
+            android:background="@drawable/bg_rec_red"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_abnormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginBottom="@dimen/margin_14"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/cross_city_tips" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/fl_map_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/tv_emulator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginBottom="40dp"
+                    android:text="@string/navi_emulator_open"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lay_newchatmsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/margin_10"
+                    android:background="@drawable/chat_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/msg_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_17"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_middle"
+                        android:textStyle="bold"
+                        tools:text="您好，请问您的定位准确吗？" />
+
+                </LinearLayout>
+
+                <anda.travel.driver.widget.layout.BaseLinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:background="@drawable/radio_ten_white__bg"
+                    android:padding="@dimen/padding_10">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_end_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1234"
+                            android:textColor="@color/item_black_light"
+                            android:textSize="34sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尾号"
+                            android:textColor="@color/item_black_light"
+                            app:layout_constraintEnd_toEndOf="@id/tv_end_number"
+                            app:layout_constraintStart_toStartOf="@id/tv_end_number"
+                            app:layout_constraintTop_toBottomOf="@id/tv_end_number" />
+
+                        <TextView
+                            android:id="@+id/tv_start"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:drawableStart="@drawable/anda_icon_start"
+                            android:drawablePadding="@dimen/margin_middle"
+                            android:ellipsize="end"
+                            android:paddingStart="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/item_black_light"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_end"
+                            app:layout_constraintEnd_toStartOf="@+id/barrier"
+                            app:layout_constraintStart_toEndOf="@id/tv_end_number"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="软件园二期" />
+
+                        <TextView
+                            android:id="@+id/tv_end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:drawableStart="@drawable/anda_icon_end"
+                            android:drawablePadding="@dimen/margin_middle"
+                            android:ellipsize="end"
+                            android:paddingStart="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/item_black_light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/barrier"
+                            app:layout_constraintStart_toStartOf="@id/tv_start"
+                            app:layout_constraintTop_toBottomOf="@id/tv_start"
+                            tools:text="国际会展中心国际会展中心国际会展中心国际会展中心" />
+
+                        <androidx.constraintlayout.widget.Barrier
+                            android:id="@+id/barrier"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:barrierDirection="right"
+                            app:constraint_referenced_ids="tv_start,tv_end" />
+
+                        <include
+                            android:id="@+id/layout_chat_phone"
+                            layout="@layout/hxyc_layout_chat_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/barrier"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </anda.travel.driver.widget.layout.BaseLinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_order_slide"
+        android:layout_width="match_parent"
+        android:layout_height="93dp">
+
+        <anda.travel.driver.widget.slide.SlideView
+            android:id="@+id/slide_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/layout_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_12"
+        android:background="@drawable/dra_home_gray"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_dispatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_dispatch"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:layout_marginBottom="@dimen/margin_2"
+                android:src="@drawable/home_dispatch"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_inDispatch"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_inDispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="调度中"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iv_dispatch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:drawablePadding="@dimen/margin_middle"
+                android:textColor="@color/bg_dark"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_inDispatch"
+                app:layout_constraintEnd_toStartOf="@+id/dispatch_right" />
+
+            <ImageView
+                android:id="@+id/dispatch_right"
+                android:layout_width="13dp"
+                android:layout_height="17dp"
+                android:padding="@dimen/padding_2"
+                android:src="@drawable/arrow_btn_right"
+                android:tint="@color/bg_dark"
+                app:layout_constraintBottom_toBottomOf="@id/tv_inDispatch"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:drawableStart="@drawable/anda_icon_start"
+                android:drawablePadding="@dimen/margin_middle"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/describe_black"
+                app:layout_constraintBottom_toTopOf="@+id/tv_end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="软件园二期" />
+
+            <ImageView
+                android:id="@+id/iv_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_3"
+                android:src="@drawable/icon_connect_dot"
+                app:layout_constraintStart_toStartOf="@id/tv_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_start" />
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:drawableStart="@drawable/anda_icon_end"
+                android:drawablePadding="@dimen/margin_middle"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/describe_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_start"
+                app:layout_constraintTop_toBottomOf="@id/iv_dot"
+                tools:text="国际会展中心" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

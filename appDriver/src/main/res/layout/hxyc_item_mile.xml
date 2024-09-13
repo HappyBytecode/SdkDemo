@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_23">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/journal_black_dark"
+        android:textSize="@dimen/text_size_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2021-09-17" />
+
+    <TextView
+        android:id="@+id/tv_mile_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公里"
+        android:textColor="@color/item_gray_primary"
+        android:textSize="@dimen/text_size_middle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_gray_primary"
+        android:textSize="@dimen/text_size_middle"
+        app:layout_constraintRight_toLeftOf="@id/tv_mile_unit"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="200" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_23"
+        android:background="@color/item_gray_primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

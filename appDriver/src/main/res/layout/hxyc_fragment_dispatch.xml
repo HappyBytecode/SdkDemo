@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <anda.travel.driver.baselibrary.view.HeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/dispatch_detail_title" />
+
+    <include layout="@layout/hxyc_layout_dispatch_top" />
+
+    <View style="@style/LineViewStyle" />
+
+    <LinearLayout
+        android:id="@+id/layout_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_top_height2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/color_text_dark"
+            android:textSize="15dp"
+            tools:text="0.5公里" />
+
+        <View style="@style/LineViewStyle_Vertical" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/color_text_dark"
+            android:textSize="15dp"
+            tools:text="3分钟" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/LineViewStyle"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/iv_traffic"
+        android:layout_width="@dimen/order_image_size"
+        android:layout_height="@dimen/order_image_size"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:src="@drawable/xingcheng_icon_lukuang" />
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="@dimen/order_image_size"
+        android:layout_height="@dimen/order_image_size"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:src="@drawable/xingcheng_icon_dingwei" />
+
+    <Button
+        android:id="@+id/tv_emulator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:text="@string/navi_emulator_open"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_btn_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/dispatch_detail_notice"
+        android:textColor="@color/text_4f5a67"
+        android:textSize="@dimen/textsize_18" />
+
+</LinearLayout>

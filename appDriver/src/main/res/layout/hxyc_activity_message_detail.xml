@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <anda.travel.driver.baselibrary.view.HeadView
+            android:id="@+id/head_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_15">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:textColor="@color/item_gray_primary"
+                android:textSize="@dimen/text_size_middle" />
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="345dp"
+                android:layout_height="195dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_27"
+                android:textColor="@color/journal_black_dark"
+                android:textSize="@dimen/text_size_middle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

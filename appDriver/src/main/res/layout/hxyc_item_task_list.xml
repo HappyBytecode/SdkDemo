@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sel_white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_10"
+    android:paddingTop="@dimen/padding_10"
+    android:paddingRight="@dimen/padding_10">
+
+    <anda.travel.driver.baselibrary.view.TextViewPlus
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/arrow_right"
+        android:drawablePadding="@dimen/padding_10"
+        android:text="进行中" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/tv_status"
+        android:text="大额订单奖励" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_toLeftOf="@+id/tv_status"
+        android:text="2017/03/01 - 2017/03/08" />
+
+    <View
+        style="@style/LineViewStyle"
+        android:layout_below="@+id/tv_duration"
+        android:layout_marginTop="@dimen/margin_10" />
+
+</RelativeLayout>
